@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "576617208969",
+    "project_id": "askhalan-toast",
+    "storage_bucket": "askhalan-toast.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:576617208969:android:c10dde87306f3a23f67a58",
+        "android_client_info": {
+          "package_name": "com.example.toast"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtlT_UP8QExOkTOh-AdciVgFWbujxjBfQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

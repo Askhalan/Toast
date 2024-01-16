@@ -47,29 +47,29 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyCSkq1FzzY_Jz_pFU_GwEaWNxReog898BY',
-    appId: '1:819387602221:web:5f45111beedb5fe4696fa4',
-    messagingSenderId: '819387602221',
-    projectId: 'toast-askhalan',
-    authDomain: 'toast-askhalan.firebaseapp.com',
-    storageBucket: 'toast-askhalan.appspot.com',
-    measurementId: 'G-4VHQDWCR4N',
+    apiKey: 'AIzaSyBl5pTMFBSYP6ErxRTIOhkw21cXH1KPy4k',
+    appId: '1:576617208969:web:c87a5454d3738b2bf67a58',
+    messagingSenderId: '576617208969',
+    projectId: 'askhalan-toast',
+    authDomain: 'askhalan-toast.firebaseapp.com',
+    storageBucket: 'askhalan-toast.appspot.com',
+    measurementId: 'G-ZEZ6R14Q71',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyC601PUnfIxGfxxfG1F-HGqDhV0xxsmiC8',
-    appId: '1:819387602221:android:5171af96dca6ecfd696fa4',
-    messagingSenderId: '819387602221',
-    projectId: 'toast-askhalan',
-    storageBucket: 'toast-askhalan.appspot.com',
+    apiKey: 'AIzaSyBtlT_UP8QExOkTOh-AdciVgFWbujxjBfQ',
+    appId: '1:576617208969:android:c10dde87306f3a23f67a58',
+    messagingSenderId: '576617208969',
+    projectId: 'askhalan-toast',
+    storageBucket: 'askhalan-toast.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDBsgIlWxqotgo8PeGmwVgXZMJwmWDOhX8',
-    appId: '1:819387602221:ios:62a98b9c662dba68696fa4',
-    messagingSenderId: '819387602221',
-    projectId: 'toast-askhalan',
-    storageBucket: 'toast-askhalan.appspot.com',
+    apiKey: 'AIzaSyBgynlJfDkEucOt4cwzCN7syxIM26DKRu0',
+    appId: '1:576617208969:ios:dc337fcc3ac0adaff67a58',
+    messagingSenderId: '576617208969',
+    projectId: 'askhalan-toast',
+    storageBucket: 'askhalan-toast.appspot.com',
     iosBundleId: 'com.example.toast',
   );
 }
