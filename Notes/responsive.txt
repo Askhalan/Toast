@@ -17,3 +17,9 @@ bool isLargeScreen() { return getScreenWidth() >= 1000; }
 
 Size screenSize = MediaQuery.of(context).size;
 Orientation orientation = MediaQuery.of(context).orientation;
+
+
+
+
+
+Color.fromARGB(84, 164, 89, 218)

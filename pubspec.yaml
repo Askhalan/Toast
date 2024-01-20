@@ -17,10 +17,11 @@ dependencies:
 
   # Utility Packages
   gap_widget: ^0.0.1
+  gap: ^3.0.1
 
   # Storage Packages
-  firebase_core: ^2.24.2
   firebase_auth: ^4.16.0
+  firebase_core: ^2.24.2
   firebase_storage: ^11.6.0
 
   #Icons
@@ -28,7 +29,8 @@ dependencies:
 
 
   # State Management
-
+  get: ^4.6.6
+  
 
 
 #----------------------- PACKAGES End -----------------------#
@@ -53,6 +55,8 @@ flutter:
     - assets/icons/
     - assets/images/
     - assets/logos/
+    - assets/images/login_image.jpg
+    # - assets/images/login_image.jpg
    
 
 

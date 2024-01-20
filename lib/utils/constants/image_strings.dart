@@ -11,4 +11,7 @@ class JImages{
   static const String logoFacebook = "assets/logos/logoFacebook.png";
   static const String logoApple = "assets/logos/logoApple.png";
 
+
+  // Images Web
+  static const String adminLogin = "assets/images/login_image.jpg";
 }

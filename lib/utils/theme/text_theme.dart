@@ -1,4 +1,8 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
+import 'package:toast/utils/constants/colors.dart';
+import 'package:toast/utils/constants/sizes.dart';
 
 class JTextTheme{
   JTextTheme._();
@@ -6,11 +10,11 @@ class JTextTheme{
 
 // +++++++---------------------------- LIGHT THEME ----------------------------+++++++
 
-  static TextTheme lightTextTheme = const TextTheme(
+  static TextTheme lightTextTheme =  TextTheme(
 
-    headlineLarge: TextStyle(),
-    headlineMedium: TextStyle(),
-    headlineSmall: TextStyle(),
+    // headlineLarge: TextStyle().copyWith(fontSize: JSize.fontLg, fontWeight: FontWeight.bold, color: JColor.textPrimary),
+    // headlineMedium: TextStyle().copyWith(fontSize: JSize.fontMd,   color: JColor.textPrimary),
+    // headlineSmall: TextStyle().copyWith(fontSize: JSize.fontSm,  color: JColor.textPrimary),
 
 
     titleLarge: TextStyle(),
@@ -33,11 +37,11 @@ class JTextTheme{
 
 // +++++++----------------------------- DARK THEME -----------------------------+++++++
 
-  static TextTheme darkTextTheme = const TextTheme(
+  static TextTheme darkTextTheme =  TextTheme(
         
-    headlineLarge: TextStyle(),
-    headlineMedium: TextStyle(),
-    headlineSmall: TextStyle(),
+    // headlineLarge: TextStyle().copyWith(fontSize: JSize.fontLg, fontWeight: FontWeight.bold, color: const Color.fromARGB(255, 255, 255, 255)),
+    // headlineMedium: TextStyle().copyWith(fontSize: JSize.fontMd,   color: const Color.fromARGB(255, 255, 255, 255)),
+    // headlineSmall: TextStyle().copyWith(fontSize: JSize.fontSm,  color: const Color.fromARGB(255, 255, 255, 255)),
 
 
     titleLarge: TextStyle(),

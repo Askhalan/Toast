@@ -13,9 +13,14 @@ class JColor {
   static const Color textSecondary = Color(0xFFFFE6BD);
   static const Color textaccent = Color(0xFFFFE6BD);
 
+
   // Background Colors
   static const Color bg = Color(0xFFFFFFFF);
-  static const Color bgSecondary = Color(0xFFF1F1F1);
+  static const Color bgSecondary = Color.fromARGB(255, 242, 242, 242);
+
+
+  // Border Colors
+  static const Color borderPrimary = Color(0xFFE8ECF4);
 
   // Icon Color
   static const Color icon = Color(0xFF797979);
@@ -25,9 +30,10 @@ class JColor {
   // Error & validation Colors
 
   // Gradient Colors
-  static const Gradient linearGradient =
-      LinearGradient(begin: Alignment(0, 0), end: Alignment(0, 0), colors: [
-    Color(0xFFFFA12E),
-    Color(0xFFFFE6BD),
-  ]);
+  static const Gradient gradientBg =
+      LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [Color(0xffFFA22E), Color(0xFFFFE6BD)],
+      );
 }
