@@ -8,4 +8,8 @@ class JPad{
   static const itemGap =  EdgeInsets.all(7.0);
 
   static const statBoxInside =  EdgeInsets.symmetric(horizontal: 20,vertical: 8);
+
+  static const webContainerInside =  EdgeInsets.all(20.0);
+
+
 }

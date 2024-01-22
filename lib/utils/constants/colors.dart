@@ -34,6 +34,10 @@ class JColor {
       LinearGradient(
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
-              colors: [Color(0xffFFA22E), Color(0xFFFFE6BD)],
+              colors: [
+                Color.fromARGB(255, 255, 179, 86),
+               Color.fromARGB(255, 240, 199, 133),
+               Color.fromARGB(255, 255, 179, 86),
+               ],
       );
 }

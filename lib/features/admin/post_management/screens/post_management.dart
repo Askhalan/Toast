@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:toast/common/web/widgets/navigation/navigation_bar.dart';
 import 'package:toast/utils/constants/colors.dart';
 
-class UserManagement extends StatelessWidget {
-  const UserManagement({super.key});
+class PostManagement extends StatelessWidget {
+  const PostManagement({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class UserManagement extends StatelessWidget {
         ),
         child: Row(
           children: [
-            JNavigationBar(selection: 3),
+            JNavigationBar(selection: 4),
             Flexible(
               flex: 7,
               child: Container(

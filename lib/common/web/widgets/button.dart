@@ -33,7 +33,7 @@ class JButtonPrimary extends StatelessWidget {
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(JSize.borderRadSm)),
             textStyle: const TextStyle(
-                fontSize: JSize.body, color: JColor.textPrimary)),
+                fontSize: JSize.fontSm, color: JColor.textPrimary)),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [Text(text),],
