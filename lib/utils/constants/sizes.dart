@@ -2,6 +2,7 @@ class JSize {
   JSize._();
 
   // Basic Font Sizes
+  static const double fontXsm = 10.0;
   static const double fontSm = 14.0;
   static const double fontMd = 16.0;
   static const double fontLg = 18.0;
@@ -24,6 +25,7 @@ class JSize {
   static const double iconLg = 36.0;
 
   // General Border Radius
+  static const double borderRadXsm = 2.0;
   static const double borderRadSm = 4.0;
   static const double borderRadMd = 7.0;
   static const double borderRadLg = 9.0;

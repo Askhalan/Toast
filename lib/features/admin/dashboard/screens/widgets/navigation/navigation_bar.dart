@@ -6,9 +6,9 @@ import 'package:toast/common/web/widgets/button.dart';
 import 'package:toast/common/web/widgets/logo.dart';
 import 'package:toast/utils/constants/paddings.dart';
 
-import '../../../../utils/constants/colors.dart';
-import '../../../../utils/constants/sizes.dart';
-import '../gap.dart';
+import '../../../../../../utils/constants/colors.dart';
+import '../../../../../../utils/constants/sizes.dart';
+import '../../../../../../common/web/widgets/gap.dart';
 import 'navigation_item.dart';
 
 class JNavigationBar extends StatelessWidget {
@@ -54,7 +54,7 @@ class JNavigationBar extends StatelessWidget {
                 width: double.infinity,
                 padding: JPad.webContainerInside,
                 decoration: BoxDecoration(
-                    color: JColor.bgSecondary,
+                    color: JColor.bg,
                     borderRadius: BorderRadius.only(
                         topRight: Radius.circular(JSize.borderRadLg),
                         bottomRight: Radius.circular(JSize.borderRadLg))),
@@ -135,7 +135,7 @@ class JNavigationBar extends StatelessWidget {
 
 // ---------------------------------------- Logout Session ----------------------------------------
 
-          Flexible(
+          Flexible(   
               flex: 1,
               child: Container(
                 height: double.infinity,

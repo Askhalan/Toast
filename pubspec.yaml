@@ -18,6 +18,8 @@ dependencies:
   # Utility Packages
   gap_widget: ^0.0.1
   gap: ^3.0.1
+  d_chart: ^2.6.7
+
 
   # Storage Packages
   firebase_auth: ^4.16.0

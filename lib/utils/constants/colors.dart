@@ -13,6 +13,10 @@ class JColor {
   static const Color textSecondary = Color(0xFFFFE6BD);
   static const Color textaccent = Color(0xFFFFE6BD);
 
+// Text Colors
+  static const Color piPrimary = Color.fromARGB(255, 27, 134, 248);
+  static const Color piSecondary = Color.fromARGB(255, 150, 180, 255);
+  static const Color piTertiary = Color.fromARGB(255, 228, 228, 228);
 
   // Background Colors
   static const Color bg = Color(0xFFFFFFFF);

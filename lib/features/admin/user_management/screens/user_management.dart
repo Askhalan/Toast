@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:toast/common/web/widgets/navigation/navigation_bar.dart';
+import 'package:toast/features/admin/dashboard/screens/widgets/navigation/navigation_bar.dart';
 import 'package:toast/utils/constants/colors.dart';
 
 class UserManagement extends StatelessWidget {
