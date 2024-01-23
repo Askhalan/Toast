@@ -21,17 +21,25 @@ class Dashoard extends StatelessWidget {
         height: double.infinity,
         width: double.infinity,
         decoration: BoxDecoration(gradient: JColor.gradientBg),
+
+  //------------------ Divides the entire screen into a row with 2 sessions  ------------------ 
+  
         child: Row(
           children: [
+
+//------------------ Divides the entire screen into a row with 2 sessions  ------------------ 
+
             JNavigationBar(selection: 1),
+
+//------------------ Divides the entire screen into a row with 2 sessions  ------------------ 
+
             Flexible(
               flex: 7,
               child: Container(
                 padding: JPad.viewsInside,
                 width: double.infinity,
                 height: double.infinity,
-                child: Column(
-                  // crossAxisAlignment: CrossAxisAlignment.start,
+                 child: Column(
                   children: [
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 20),

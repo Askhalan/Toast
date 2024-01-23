@@ -3,7 +3,6 @@
 import 'package:flutter/material.dart';
 import 'package:toast/common/web/styles/texts.dart';
 import 'package:toast/utils/constants/paddings.dart';
-
 import '../../../utils/constants/colors.dart';
 import '../../../utils/constants/sizes.dart';
 import '../../../utils/devices/responsive.dart';
@@ -14,7 +13,8 @@ final String title;
 final int stats;
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Container( 
+      margin: EdgeInsets.all(10),
       padding: JPad.statBoxInside,
       width: JFluid.percentWidth(context: context, percent: 15),
       height: JFluid.percentHeight(context: context, percent: 15),
