@@ -22,8 +22,12 @@ class JNavigationItem extends StatelessWidget {
       child: Container(
         margin: EdgeInsets.symmetric(vertical: 5),
         padding: EdgeInsets.all(3),
+        constraints: BoxConstraints(
+          minHeight: 40,
+          maxHeight: 50
+        ),
         width: double.infinity,
-        height: JFluid.percentHeight(context: context, percent: 5),
+        // height: JFluid.percentHeight(context: context, percent: 5),
         decoration: BoxDecoration(
             color: selected==true ? JColor.secondary: Color.fromARGB(0, 255, 255, 255),
             borderRadius: BorderRadius.circular(JSize.borderRadMd)),

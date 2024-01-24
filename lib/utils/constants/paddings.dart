@@ -13,9 +13,12 @@ class JPad{
 
   static const statBoxInside =  EdgeInsets.symmetric(horizontal: 20,vertical: 8);
 
+  static const statBoxInsideScrollable =  EdgeInsets.only(left: 20,right: 20,top: 8);
+
     static const containerPiChart =  EdgeInsets.all(15.0);
 
   static const webContainerInside =  EdgeInsets.all(20.0);
+  static const webContainerInsideScrollable =  EdgeInsets.only(left: 20,right: 20,top: 20);
 
   static const wideBox =  EdgeInsets.symmetric(horizontal: 40,vertical: 3);
 

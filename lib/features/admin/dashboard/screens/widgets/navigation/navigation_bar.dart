@@ -45,27 +45,30 @@ class JNavigationBar extends StatelessWidget {
     }
     return Flexible(
       flex: 2,
-      child: Column(
-        children: [
-          Flexible(
-              flex: 5,
-              child: Container(
-                height: double.infinity,
-                width: double.infinity,
-                padding: JPad.webContainerInside,
-                decoration: BoxDecoration(
-                    color: JColor.bg,
-                    borderRadius: BorderRadius.only(
-                        topRight: Radius.circular(JSize.borderRadLg),
-                        bottomRight: Radius.circular(JSize.borderRadLg))),
-                child: Column(
-                  children: [
-// ---------------------------------------- Navigation Session ----------------------------------------
-
-                    Flexible(
-                      flex: 4,
-                      child: Container(
-                        // color: Color.fromARGB(255, 255, 183, 183),
+      child: Container(
+        constraints: BoxConstraints(
+          maxWidth: 300,
+          minWidth: 200
+        ),
+        child: Column(
+          children: [
+            Flexible(
+                flex: 5,
+                child: Container(
+                  height: double.infinity,
+                  width: double.infinity,
+                  padding: JPad.webContainerInside,
+                  decoration: BoxDecoration(
+                      color: JColor.bg,
+                      borderRadius: BorderRadius.only(
+                          topRight: Radius.circular(JSize.borderRadLg),
+                          bottomRight: Radius.circular(JSize.borderRadLg))),
+                  child: Column(
+                    children: [
+        // ---------------------------------------- Navigation Session ----------------------------------------
+        
+                      Flexible(
+                        flex: 4,
                         child: Column(children: [
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -98,57 +101,59 @@ class JNavigationBar extends StatelessWidget {
                               selected: posts),
                         ]),
                       ),
-                    ),
-
-// ---------------------------------------- Admin Details Session ----------------------------------------
-
-                    Flexible(
-                      flex: 1,
-                      child: Container(
-                        decoration: BoxDecoration(
-                            border: Border(
-                                top: BorderSide(
-                                    color:
-                                        Color.fromARGB(167, 115, 115, 115)))),
-                        width: double.infinity,
-                        height: double.infinity,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            CircleAvatar(),
-                            Text(
-                              'Askhalan',
-                              style: JTexts.wSubtitle,
-                            ),
-                            Text(
-                              'askkhalan.aj@gmail.com',
-                              style: JTexts.wBody,
-                            )
-                          ],
+        
+        // ---------------------------------------- Admin Details Session ----------------------------------------
+        
+                      Flexible(
+                        flex: 1,
+                        child: Container(
+                          decoration: BoxDecoration(
+                              border: Border(
+                                  top: BorderSide(
+                                      color:
+                                          Color.fromARGB(167, 115, 115, 115)))),
+                          width: double.infinity,
+                          height: double.infinity,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                              CircleAvatar(),
+                              Text(
+                                'Askhalan',
+                                style: JTexts.wSubtitle,
+                              ),
+                              Text(
+                                'askkhalan.aj@gmail.com',
+                                style: JTexts.wBody,
+                              )
+                            ],
+                          ),
                         ),
-                      ),
-                    )
-                  ],
-                ),
-              )),
-
-// ---------------------------------------- Logout Session ----------------------------------------
-
-          Flexible(   
-              flex: 1,
-              child: Container(
-                height: double.infinity,
-                margin: EdgeInsets.only(top: 10),
-                padding: EdgeInsets.symmetric(horizontal: 50, vertical: 38),
-                decoration: BoxDecoration(
-                    color: JColor.bgSecondary,
-                    borderRadius: BorderRadius.only(
-                        topRight: Radius.circular(JSize.borderRadLg),
-                        bottomRight: Radius.circular(JSize.borderRadLg))),
-                child: JButtonPrimary(text: 'Logout'),
-              ))
-        ],
+                      )
+                    ],
+                  ),
+                )),
+        
+        // ---------------------------------------- Logout Session ----------------------------------------
+        
+            Flexible(   
+                flex: 1,
+                child: Expanded(
+                  child: Container(
+                    // height: double.infinity,
+                    margin: EdgeInsets.only(top: 10),
+                    padding: EdgeInsets.symmetric(horizontal: 50, vertical: 38),
+                    decoration: BoxDecoration(
+                        color: JColor.bgSecondary,
+                        borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(JSize.borderRadLg),
+                            bottomRight: Radius.circular(JSize.borderRadLg))),
+                    child: JButtonPrimary(text: 'Logout'),
+                  ),
+                ))
+          ],
+        ),
       ),
     );
   }

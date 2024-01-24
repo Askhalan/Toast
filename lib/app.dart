@@ -3,6 +3,7 @@ import 'features/admin/dashboard/screens/dashboard.dart';
 import 'features/admin/ingredients_management/screens/ingeridentsmanagement.dart';
 import 'features/admin/login/screens/admin_login.dart';
 import 'features/admin/post_management/screens/post_management.dart';
+import 'features/admin/user_management/screens/user_management.dart';
 import 'utils/theme/theme.dart';
 
 class Toast extends StatelessWidget {
@@ -19,7 +20,8 @@ class Toast extends StatelessWidget {
       //  home:  ALoginScn(),
       // home: const Dashoard(),
       // home: const IngeridentsManagement(),
-      home: const PostManagement(),
+      // home: const PostManagement(),
+      home: const UserManagement(),
     );
   }
 }

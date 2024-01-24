@@ -6,7 +6,6 @@ import 'package:toast/common/web/widgets/stats_box.dart';
 import 'package:toast/features/admin/dashboard/screens/widgets/navigation/navigation_bar.dart';
 import 'package:toast/utils/constants/colors.dart';
 import 'package:toast/utils/constants/paddings.dart';
-import 'package:toast/utils/constants/sizes.dart';
 
 import '../../../../common/web/widgets/gap.dart';
 import '../../dashboard/screens/widgets/bar_chart/bar_chart_container.dart';
@@ -24,7 +23,10 @@ class PostManagement extends StatelessWidget {
         decoration: BoxDecoration(gradient: JColor.gradientBg),
         child: Row(
           children: [
+
+            
             JNavigationBar(selection: 4), //<------------ Navigation Bar
+            
             Flexible(
               flex: 7,
               child: Container(
