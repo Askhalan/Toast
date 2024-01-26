@@ -14,4 +14,9 @@ class JImages{
 
   // Images Web
   static const String adminLogin = "assets/images/login_image.jpg";
+
+// -- OnBoarding Texts
+  static const String onBoardingImage1 = "assets/images/onboarding/Onboarding1.gif";
+  static const String onBoardingImage2 = "assets/images/onboarding/Onboarding2.gif";
+  static const String onBoardingImage3 = "assets/images/on_boarding_images/";
 }

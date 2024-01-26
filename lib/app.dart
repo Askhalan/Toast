@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'features/admin/dashboard/screens/dashboard.dart';
-import 'features/admin/ingredients_management/screens/ingeridentsmanagement.dart';
-import 'features/admin/login/screens/admin_login.dart';
-import 'features/admin/post_management/screens/post_management.dart';
+import 'package:get/get.dart';
 import 'features/admin/user_management/screens/user_management.dart';
 import 'utils/theme/theme.dart';
 
@@ -11,17 +8,19 @@ class Toast extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.system,
       theme: JAppTheme.lightTheme,
       darkTheme: JAppTheme.darkTheme,
 
-      //  home:  ALoginScn(),
+      //  home:  ALoginScn()
       // home: const Dashoard(),
       // home: const IngeridentsManagement(),
       // home: const PostManagement(),
       home: const UserManagement(),
+
+      // home:  OnBoarding(),
     );
   }
 }

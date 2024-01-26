@@ -19,9 +19,11 @@ dependencies:
   gap_widget: ^0.0.1
   gap: ^3.0.1
   d_chart: ^2.6.7
+  iconsax: ^0.0.8
+  smooth_page_indicator: ^1.1.0
 
 
-  # Storage Packages
+  # Storage Packages 
   firebase_auth: ^4.16.0
   firebase_core: ^2.24.2
   firebase_storage: ^11.6.0
@@ -57,7 +59,7 @@ flutter:
     - assets/icons/
     - assets/images/
     - assets/logos/
-    - assets/images/login_image.jpg
+    - assets/images/onboarding/
     # - assets/images/login_image.jpg
    
 
