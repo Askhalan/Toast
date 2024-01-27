@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:toast/common/web/styles/texts.dart';
 import 'package:toast/common/web/widgets/button.dart';
-import 'package:toast/common/web/widgets/logo.dart';
+import 'package:toast/common/web/widgets/logos/icon_logo.dart';
 import 'package:toast/utils/constants/paddings.dart';
 
 import '../../../../../../utils/constants/colors.dart';

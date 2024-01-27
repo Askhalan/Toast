@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:toast/features/user/authentication/screens/login/scn_login.dart';
 
 class OnBoardingController extends GetxController{
   static OnBoardingController get instance => Get.find(); //<--- finding the instance of  onboarding controller which is created earlier
@@ -29,7 +30,7 @@ class OnBoardingController extends GetxController{
   // Update current page & Jump to next page
   void nextPage(){
     if(currentPageIndex.value ==1){
-
+      Get.offAll(const ScnLogin());
     }else{
       int page = currentPageIndex.value! +1;
       pageController.jumpToPage(page);
@@ -40,6 +41,6 @@ class OnBoardingController extends GetxController{
   //Update current index & Jump to the last page
   void skipPage(){
     currentPageIndex.value =1;
-    pageController.jumpToPage(1);
+    Get.offAll(const ScnLogin());
   } 
 }

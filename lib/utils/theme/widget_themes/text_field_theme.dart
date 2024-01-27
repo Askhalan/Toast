@@ -36,6 +36,8 @@ class JTextFormFieldTheme {
     ),
   );
 
+
+
   static InputDecorationTheme darkInputDecorationTheme = InputDecorationTheme(
     errorMaxLines: 2,
     prefixIconColor: JColor.darkGrey,

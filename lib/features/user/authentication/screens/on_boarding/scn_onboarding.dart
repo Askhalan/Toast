@@ -6,13 +6,13 @@ import 'package:toast/utils/constants/image_strings.dart';
 
 import '../../../../../utils/constants/text_strings.dart';
 import '../../contollers/onboarding_controller.dart';
-import 'on_boarding_navigation.dart';
-import 'on_boarding_nextbutton.dart';
-import 'on_boarding_page.dart';
-import 'on_boarding_skip.dart';
+import 'w_onboarding_navigation.dart';
+import 'w_onboarding_nextbutton.dart';
+import 'w_onboarding_page.dart';
+import 'w_onboarding_skip.dart';
 
-class OnBoarding extends StatelessWidget {
-  const OnBoarding({super.key});
+class ScnOnBoarding extends StatelessWidget {
+  const ScnOnBoarding({super.key});
 
   @override
   Widget build(BuildContext context) {

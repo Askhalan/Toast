@@ -8,7 +8,7 @@ import 'package:toast/utils/constants/sizes.dart';
 import 'package:toast/utils/devices/responsive.dart';
 
 import '../../../../common/web/widgets/button.dart';
-import '../../../../common/web/widgets/logo.dart';
+import '../../../../common/web/widgets/logos/icon_logo.dart';
 import '../../../../common/web/widgets/text_form_field.dart';
 
 class ALoginScn extends StatelessWidget {
@@ -65,14 +65,14 @@ class ALoginScn extends StatelessWidget {
                           ),
                           Column(
                             children: [
-                              JTextFormField(
+                              JwTextFormField(
                                 label: 'Email',
                                 hintText: 'Enter your email',
                                 textEditingController: emailController,
                                 errorText: '',
                                 hidetext: false,
                               ),
-                              JTextFormField(
+                              JwTextFormField(
                                 label: 'Password',
                                 hintText: 'Enter your password',
                                 textEditingController: passwordController,

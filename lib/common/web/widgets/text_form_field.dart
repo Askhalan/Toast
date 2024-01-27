@@ -4,8 +4,8 @@ import 'package:toast/utils/constants/colors.dart';
 import 'package:toast/utils/constants/paddings.dart';
 import 'package:toast/utils/constants/sizes.dart';
 
-class JTextFormField extends StatelessWidget {
-  const JTextFormField(
+class JwTextFormField extends StatelessWidget {
+  const JwTextFormField(
       {super.key,
       this.formKey,
       required this.textEditingController,

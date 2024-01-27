@@ -21,7 +21,7 @@ class JDeviceUtil{
 
   static bool isLandscapeOrientation(BuildContext context) {
     final viewInsets = View.of(context).viewInsets;
-    return viewInsets.bottom == 0;
+    return viewInsets.bottom  == 0;
   }
 
   static bool isPortraitOrientation(BuildContext context) {

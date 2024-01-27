@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'features/admin/user_management/screens/user_management.dart';
+import 'features/user/authentication/screens/on_boarding/scn_onboarding.dart';
 import 'utils/theme/theme.dart';
 
 class Toast extends StatelessWidget {
@@ -18,9 +18,10 @@ class Toast extends StatelessWidget {
       // home: const Dashoard(),
       // home: const IngeridentsManagement(),
       // home: const PostManagement(),
-      home: const UserManagement(),
+      // home: const UserManagement(),
 
-      // home:  OnBoarding(),
+
+      home: const ScnOnBoarding(),
     );
   }
 }

@@ -71,7 +71,7 @@ class JmSize{
 
   // Button sizes
   static const double buttonHeight = 18.0;
-  static const double buttonRadius = 12.0;
+  static const double buttonRadius = 8.0;
   static const double buttonWidth = 120.0;
   static const double buttonElevation = 4.0;
 
@@ -81,7 +81,7 @@ class JmSize{
   // Image sizes
   static const double imageThumbSize = 80.0;
 
-  // Default spacing between sections
+  // ---------- Default spacing between sections ----------
   static const double defaultSpace = 24.0;
   static const double spaceBtwItems = 16.0;
   static const double spaceBtwSections = 32.0;
@@ -100,7 +100,7 @@ class JmSize{
   static const double productItemHeight = 160.0;
 
   // Input field
-  static const double inputFieldRadius = 12.0;
+  static const double inputFieldRadius = 7.0;
   static const double spaceBtwInputFields = 16.0;
 
   // Card sizes

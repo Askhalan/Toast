@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../../../utils/constants/image_strings.dart';
+import '../../../../utils/constants/image_strings.dart';
 
-class JIconLogo extends StatelessWidget {
-  const JIconLogo({super.key, required this.size});
+class JLogoText extends StatelessWidget {
+  const JLogoText({super.key, required this.size});
   final double size;
   @override
   Widget build(BuildContext context) {
@@ -11,7 +11,7 @@ class JIconLogo extends StatelessWidget {
         height: size,
         width: size,
         child: Image.asset(
-          JImages.logoIcon,
+          JImages.logoText,
         ));
   }
 }
