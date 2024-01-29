@@ -23,7 +23,7 @@ class JMElevatedButton extends StatelessWidget {
       width: width,
       child: ElevatedButton(
         onPressed: onPressed,
-        child:  Text(text),
+        child:  Text(text,),
       ),
     );
   }

@@ -1,10 +1,7 @@
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
-import 'package:get/get_rx/src/rx_types/rx_types.dart';
-import 'package:get/get_state_manager/get_state_manager.dart';
-import 'package:get/instance_manager.dart';
-import 'package:toast/features/admin/login/screens/admin_home.dart';
+import 'package:toast/features/admin/dashboard/screens/dashboard.dart';
 import 'package:toast/utils/constants/colors.dart';
 
 import '../screens/admin_login.dart';
@@ -31,7 +28,7 @@ class AuthController extends GetxController{
       Get.offAll(()=>ALoginScn());
     }
     else{
-      Get.offAll(()=> AdminHome(email:user.email));
+      Get.offAll(()=> const Dashoard());
     }
   }
 

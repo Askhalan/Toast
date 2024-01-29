@@ -20,6 +20,7 @@ dependencies:
   gap: ^3.0.1
   d_chart: ^2.6.7
   iconsax: ^0.0.8
+  flutter_native_splash: ^2.3.10
   smooth_page_indicator: ^1.1.0
 
 
@@ -27,6 +28,7 @@ dependencies:
   firebase_auth: ^4.16.0
   firebase_core: ^2.24.2
   firebase_storage: ^11.6.0
+  cloud_firestore: ^4.14.0
 
   #Icons
   cupertino_icons: ^1.0.2
@@ -34,6 +36,7 @@ dependencies:
 
   # State Management
   get: ^4.6.6
+  get_storage: ^2.1.1
   
 
 
@@ -45,7 +48,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  flutter_lints: ^2.0.0
+  flutter_lints: ^3.0.1
 
  
  
@@ -60,6 +63,7 @@ flutter:
     - assets/images/
     - assets/logos/
     - assets/images/onboarding/
+    - assets/images/animations/
     # - assets/images/login_image.jpg
    
 

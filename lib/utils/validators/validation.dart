@@ -1,5 +1,17 @@
 
-class TValidator {
+class JValidator {
+
+//--------------------- Email Validator ---------------------
+
+  static String? validateEmptyText(String? fieldName, String? value){
+    if(value == null || value.isEmpty){
+      return '$fieldName is required';
+    }
+    return null;
+  }
+
+//--------------------- Email Validator --------------------- 
+
   static String? validateEmail(String? value) {
     if (value == null || value.isEmpty) {
       return 'Email is required.';
@@ -14,6 +26,8 @@ class TValidator {
 
     return null;
   }
+
+//--------------------- Password Validator ---------------------
 
   static String? validatePassword(String? value) {
     if (value == null || value.isEmpty) {
@@ -43,20 +57,7 @@ class TValidator {
     return null;
   }
 
-  static String? validatePhoneNumber(String? value) {
-    if (value == null || value.isEmpty) {
-      return 'Phone number is required.';
-    }
+  
 
-    // Regular expression for phone number validation (assuming a 10-digit US phone number format)
-    final phoneRegExp = RegExp(r'^\d{10}$');
 
-    if (!phoneRegExp.hasMatch(value)) {
-      return 'Invalid phone number format (10 digits required).';
-    }
-
-    return null;
-  }
-
-// Add more custom validators as needed for your specific requirements.
 }

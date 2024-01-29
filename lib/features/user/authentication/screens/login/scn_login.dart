@@ -8,7 +8,7 @@ import 'package:toast/utils/constants/text_strings.dart';
 import 'package:toast/utils/helpers/helper_functions.dart';
 
 import 'w_divider_form.dart';
-import 'w_login_footer.dart';
+import 'w_footer_social_buttons.dart';
 import 'w_login_form.dart';
 import 'w_login_header.dart';
 
@@ -39,7 +39,7 @@ class ScnLogin extends StatelessWidget {
               JGap(
                         h: JmSize.spaceBtwSections*2,
                       ),
-              ULoginFooter()
+              FooterSocialButtons()
             ],
           ),
         ),

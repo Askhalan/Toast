@@ -15,8 +15,14 @@ class JImages{
   // Images Web
   static const String adminLogin = "assets/images/login_image.jpg";
 
-// -- OnBoarding Texts
+// -- OnBoarding Images
   static const String onBoardingImage1 = "assets/images/onboarding/Onboarding1.gif";
   static const String onBoardingImage2 = "assets/images/onboarding/Onboarding2.gif";
   static const String onBoardingImage3 = "assets/images/on_boarding_images/";
+
+
+  // -- Annimated Giffs
+  static const String createdSUccessfully = "assets/images/animations/Celebration.gif";
+  // static const String onBoardingImage2 = "assets/images/onboarding/Onboarding2.gif";
+  // static const String onBoardingImage3 = "assets/images/on_boarding_images/";
 }

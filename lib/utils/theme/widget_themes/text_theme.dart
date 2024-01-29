@@ -21,6 +21,7 @@ class JTextTheme {
 
     labelLarge: const TextStyle().copyWith(fontSize: 12.0, fontWeight: FontWeight.normal, color: JColor.dark),
     labelMedium: const TextStyle().copyWith(fontSize: 12.0, fontWeight: FontWeight.normal, color: JColor.dark.withOpacity(0.5)),
+    labelSmall: const TextStyle().copyWith(fontSize: 14.0, fontWeight: FontWeight.normal, color: JColor.primary),
   );
 
   /// Customizable Dark Text Theme
@@ -39,5 +40,5 @@ class JTextTheme {
 
     labelLarge: const TextStyle().copyWith(fontSize: 12.0, fontWeight: FontWeight.normal, color: JColor.light),
     labelMedium: const TextStyle().copyWith(fontSize: 12.0, fontWeight: FontWeight.normal, color: JColor.light.withOpacity(0.5)),
-  );
+    labelSmall: const TextStyle().copyWith(fontSize: 14.0, fontWeight: FontWeight.normal, color: JColor.primary),);
 }

@@ -1,5 +1,7 @@
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:toast/features/user/authentication/screens/login/scn_login.dart';
 
 class OnBoardingController extends GetxController{
@@ -30,6 +32,9 @@ class OnBoardingController extends GetxController{
   // Update current page & Jump to next page
   void nextPage(){
     if(currentPageIndex.value ==1){
+      final storage = GetStorage();
+      storage.write('isFirstTime',false);
+
       Get.offAll(const ScnLogin());
     }else{
       int page = currentPageIndex.value! +1;

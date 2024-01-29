@@ -25,7 +25,7 @@ class JTexts{
 
 
   // -- Authentication Forms
-  static const String firstName = "First Name";
+  static const String name = "Name";
   static const String lastName = "Last Name";
   static const String email = "E-Mail";
   static const String password = "Password";
@@ -38,13 +38,15 @@ class JTexts{
   static const String signup = "Signup";
   static const String createAccount = "Create Account";
   static const String orLoginWith = "or login with";
-  static const String orSignUpWith = "or sign up with";
+  static const String orSignUpWith = "or register  with";
   static const String iAgreeTo = "I agree to";
   static const String privacyPolicy = "Privacy Policy";
   static const String termsOfUse = "Terms of use";
   static const String verificationCode = "verificationCode";
   static const String resendEmail = "Resend Email";
   static const String resendEmailIn = "Resend email in";
+  static const String haveAccount = "Aready have an account?";
+  static const String loginNow = "Login Now";
 
 
   // -- Authentication Headings
