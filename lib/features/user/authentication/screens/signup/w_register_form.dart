@@ -55,7 +55,7 @@ class RegisterForm extends StatelessWidget {
           ),
           JTextFIeldContainer(
             child: TextFormField(
-              validator: (value)=> JValidator.validatePassword(value),
+              // validator: (value)=> JValidator.validatePassword(value),
               controller: controller.password,
               decoration: const InputDecoration(
                 labelText: JTexts.password,

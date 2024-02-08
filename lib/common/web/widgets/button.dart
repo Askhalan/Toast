@@ -24,9 +24,7 @@ class JButtonPrimary extends StatelessWidget {
         maxHeight: 55.0, // Set your maximum height
       ),
       child: ElevatedButton(
-        onPressed:(){
-                             
-                            },
+        onPressed:onPressed,
         style: ElevatedButton.styleFrom(
             // elevation:
             backgroundColor: JColor.primary,

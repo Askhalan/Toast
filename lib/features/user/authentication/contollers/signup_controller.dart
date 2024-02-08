@@ -6,6 +6,7 @@ import 'package:toast/data/repository/auth_repository.dart';
 import 'package:toast/data/repository/user_repository.dart';
 import 'package:toast/features/user/authentication/models/user_model.dart';
 import 'package:toast/features/user/authentication/screens/signup/scn_created_successfull.dart';
+import 'package:toast/utils/popups/snackbars.dart';
 
 class SignupController extends GetxController {
   static SignupController get instance => Get.find();
@@ -35,17 +36,17 @@ class SignupController extends GetxController {
           id: userCredential.user!.uid,
           username: username.text,
           email: email.text,
-          password: password.text,
+          // password: password.text,
           name: name.text);
 
       final userRepository = Get.put(UserRepository());
       await userRepository.saveUserRecord(newUser);
 
-      Get.to(()=>ScnRegisteredSuccess);
+      Get.to(()=>const ScnRegisteredSuccess());
 
 
     } catch (e) { 
-      print(e);
-    }
+      JMessages.snackbarerror(title: 'Error', message:  e.toString());
+    } 
   }
 }

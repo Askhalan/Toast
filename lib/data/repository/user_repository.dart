@@ -16,8 +16,8 @@ saveUserRecord(UserModel user)async {
   try {
     await _db.collection("users").doc(user.id).set(user.tojson());
   }
-  
-  
+
+
   on FirebaseException catch (e) {
       throw JFirebaseException(e.code).message;
     } on JFormatException catch (_) {

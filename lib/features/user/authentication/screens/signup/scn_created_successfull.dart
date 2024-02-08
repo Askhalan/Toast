@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:toast/common/web/widgets/button.dart';
 import 'package:toast/common/web/widgets/gap.dart';
 import 'package:toast/features/user/authentication/screens/login/scn_login.dart';
+import 'package:toast/features/user/authentication/screens/signup/scn_signup.dart';
 import 'package:toast/utils/constants/image_strings.dart';
 import 'package:toast/utils/constants/paddings.dart';
 import 'package:toast/utils/constants/sizes.dart';

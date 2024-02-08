@@ -5,12 +5,12 @@ class UserModel {
   final String name;
   final String username;
   final String email;
-  final String password;
+  // final String password;
 
   UserModel({
     required this.username,
     required this.email,
-    required this.password,
+    // required this.password,
     this.id = '',
     required this.name,
   });
@@ -20,7 +20,7 @@ class UserModel {
         'name': name,
         'username': username,
         'email': email,
-        'password': password
+        // 'password': password
       };
 
   static UserModel fromDb(Map<String, dynamic>? value) => UserModel(
@@ -28,6 +28,6 @@ class UserModel {
         name: value['name'],
         username: value['username'],
         email: value['email'],
-        password: value['password'],
+        // password: value['password'],
       );
 }
