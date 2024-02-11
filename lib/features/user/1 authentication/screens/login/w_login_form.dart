@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:toast/common/app/widgets/constrained_container.dart';
-import 'package:toast/features/user/authentication/contollers/login.controller.dart';
-import 'package:toast/features/user/authentication/screens/signup/scn_signup.dart';
+import 'package:toast/common/app/widgets/decoration_items/constrained_container.dart';
+import 'package:toast/features/user/1%20authentication/contollers/login.controller.dart';
+import 'package:toast/features/user/1%20authentication/screens/signup/scn_signup.dart';
 import 'package:toast/utils/validators/validation.dart';
 
-import '../../../../../common/app/widgets/elevated_button.dart';
-import '../../../../../common/app/widgets/outlined_button.dart';
+import '../../../../../common/app/widgets/form elements/elevated_button.dart';
+import '../../../../../common/app/widgets/form elements/outlined_button.dart';
 import '../../../../../common/web/widgets/gap.dart';
 import '../../../../../utils/constants/sizes.dart';
 import '../../../../../utils/constants/text_strings.dart';

@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import 'package:toast/features/user/authentication/contollers/onboarding_controller.dart';
+import 'package:toast/features/user/1%20authentication/contollers/onboarding_controller.dart';
 
 import '../../../../../utils/constants/colors.dart';
 import '../../../../../utils/constants/sizes.dart';

@@ -4,8 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:toast/data/repository/auth_repository.dart';
 import 'package:toast/data/repository/user_repository.dart';
-import 'package:toast/features/user/authentication/models/user_model.dart';
-import 'package:toast/features/user/authentication/screens/signup/scn_created_successfull.dart';
+import 'package:toast/features/user/1%20authentication/models/user_model.dart';
+import 'package:toast/features/user/1%20authentication/screens/login/scn_login.dart';
+import 'package:toast/features/user/1%20authentication/screens/signup/scn_created_successfull.dart';
 import 'package:toast/utils/popups/snackbars.dart';
 
 class SignupController extends GetxController {
@@ -49,4 +50,11 @@ class SignupController extends GetxController {
       JMessages.snackbarerror(title: 'Error', message:  e.toString());
     } 
   }
+
+
+  haveAccount(){
+    Get.off(()=>const ScnLogin());
+    }
+
+    
 }

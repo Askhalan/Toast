@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:toast/features/user/authentication/screens/login/scn_login.dart';
+import 'package:toast/features/user/1%20authentication/screens/login/scn_login.dart';
 
 class OnBoardingController extends GetxController{
   static OnBoardingController get instance => Get.find(); //<--- finding the instance of  onboarding controller which is created earlier

@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:toast/features/user/authentication/screens/login/scn_temp_home.dart';
-
-import '../../../../data/repository/auth_repository.dart';
 import '../../../../utils/popups/snackbars.dart';
+import '../../2 feeds/screens/scn_home.dart';
+import '../../navigation_menu/screens/navigation_menu.dart';
 
 class LoginController extends GetxController {
   static LoginController get instance => Get.find();
@@ -18,14 +17,16 @@ class LoginController extends GetxController {
   login() async {
     try {
       //Form Validation
-      if (!loginFormKey.currentState!.validate()) {
-        return;
-      }
+      // if (!loginFormKey.currentState!.validate()) {
+      //   return;
+      // }
 
-      await AuthenticationRepository.instance
-          .loginUserWithEmail(email.text.trim(), password.text);
+      // await AuthenticationRepository.instance
+      //     .loginUserWithEmail(email.text.trim(), password.text);
 
-      Get.to(() => const ScnTempHome());
+      // Get.to(() =>  const HomeScn());
+      Get.to(() =>   NavigationMenu());
+      
     } catch (e) {
       JMessages.snackbarerror(title: 'Error', message: e.toString());
     }

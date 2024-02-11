@@ -22,6 +22,8 @@ dependencies:
   iconsax: ^0.0.8
   flutter_native_splash: ^2.3.10
   smooth_page_indicator: ^1.1.0
+  unicons: ^2.1.1
+  floating_frosted_bottom_bar: ^0.0.1
 
 
   # Storage Packages 
@@ -64,6 +66,7 @@ flutter:
     - assets/logos/
     - assets/images/onboarding/
     - assets/images/animations/
+    - assets/images/Temp/
     # - assets/images/login_image.jpg
    
 

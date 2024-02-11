@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:toast/common/web/widgets/gap.dart';
-import 'package:toast/features/user/authentication/screens/login/w_divider_form.dart';
+import 'package:toast/features/user/1%20authentication/screens/login/w_divider_form.dart';
 import 'package:toast/utils/constants/sizes.dart';
 import 'package:toast/utils/constants/text_strings.dart';
 
