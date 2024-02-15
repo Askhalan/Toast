@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../../../data/repository/auth_repository.dart';
 import '../../../../utils/popups/snackbars.dart';
 import '../../2 feeds/screens/scn_home.dart';
-import '../../navigation_menu/screens/navigation_menu.dart';
+import '../../navigation_menu/screens/nav_menu.dart';
 
 class LoginController extends GetxController {
   static LoginController get instance => Get.find();
@@ -16,7 +17,7 @@ class LoginController extends GetxController {
 //------------ Methods ------------
   login() async {
     try {
-      //Form Validation
+      // Form Validation;
       // if (!loginFormKey.currentState!.validate()) {
       //   return;
       // }
@@ -29,6 +30,7 @@ class LoginController extends GetxController {
       
     } catch (e) {
       JMessages.snackbarerror(title: 'Error', message: e.toString());
-    }
+    } 
   }
+
 }

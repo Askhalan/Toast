@@ -37,7 +37,8 @@ class JTextFormFieldTheme {
         borderRadius: BorderRadius.circular(JmSize.inputFieldRadius),
         borderSide: const BorderSide(width: 2, color: JColor.warning),
       ),
-      fillColor: JColor.bgSecondary
+      filled: true,
+      fillColor: JColor.lightGrey
       );
 
 

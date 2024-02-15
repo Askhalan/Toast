@@ -1,28 +1,32 @@
-class JTexts{
-
+class JTexts {
   static const String headingtext = " ";
   static const String loginScn = "Welcome back! Glad to see you, Again!";
   static const String registerScn = " Hello! Register to get started ";
-  static const String searchScn  = "Find best recipes for cooking ";
+  static const String searchScn = "Find best recipes for cooking ";
 
   // -- GLOBAL Texts
   static const String and = "and";
+  static const String add = "add";
+  static const String next = "Next";
   static const String skip = "Skip";
+  static const String save = "Save";
   static const String done = "Done";
   static const String submit = "Submit";
   static const String appName = "T-Store";
   static const String tContinue = "Continue";
-
+  static const String choose = "Choose";
 
   // -- OnBoarding Texts
   static const String onBoardingTitle1 = "Choose your product";
   static const String onBoardingTitle2 = "Select Payment Method";
   static const String onBoardingTitle3 = "Deliver at your door step";
 
-  static const String onBoardingSubTitle1 = "Welcome to a World of Limitless Choices - Your Perfect Product Awaits!";
-  static const String onBoardingSubTitle2 = "For Seamless Transactions, Choose Your Payment Path - Your Convenience, Our Priority!";
-  static const String onBoardingSubTitle3 = "From Our Doorstep to Yours - Swift, Secure, and Contactless Delivery!";
-
+  static const String onBoardingSubTitle1 =
+      "Welcome to a World of Limitless Choices - Your Perfect Product Awaits!";
+  static const String onBoardingSubTitle2 =
+      "For Seamless Transactions, Choose Your Payment Path - Your Convenience, Our Priority!";
+  static const String onBoardingSubTitle3 =
+      "From Our Doorstep to Yours - Swift, Secure, and Contactless Delivery!";
 
   // -- Authentication Forms
   static const String name = "Name";
@@ -47,20 +51,52 @@ class JTexts{
   static const String resendEmailIn = "Resend email in";
   static const String haveAccount = "Aready have an account?";
   static const String loginNow = "Login Now";
-
+  static const String title = "Title";
 
   // -- Authentication Headings
   static const String loginTitle = "Welcome back,";
   static const String loginSubTitle = "Glad to see you again.";
   static const String signupTitle = "Let’s create your account";
   static const String forgetPasswordTitle = "Forget password";
-  static const String forgetPasswordSubTitle = "Don’t worry sometimes people can forget too, enter your email and we will send you a password reset link.";
+  static const String forgetPasswordSubTitle =
+      "Don’t worry sometimes people can forget too, enter your email and we will send you a password reset link.";
   static const String changeYourPasswordTitle = "Password Reset Email Sent";
-  static const String changeYourPasswordSubTitle = "Your Account Security is Our Priority! We've Sent You a Secure Link to Safely Change Your Password and Keep Your Account Protected.";
+  static const String changeYourPasswordSubTitle =
+      "Your Account Security is Our Priority! We've Sent You a Secure Link to Safely Change Your Password and Keep Your Account Protected.";
   static const String confirmEmail = "Verify your email address!";
-  static const String confirmEmailSubTitle = "Congratulations! Your Account Awaits: Verify Your Email to Start Shopping and Experience a World of Unrivaled Deals and Personalized Offers.";
-  static const String emailNotReceivedMessage = "Didn’t get the email? Check your junk/spam or resend it.";
-  static const String yourAccountCreatedTitle = "Your account successfully created!";
-  static const String yourAccountCreatedSubTitle = "Welcome to Your Ultimate Shopping Destination: Your Account is Created, Unleash the Joy of Seamless Online Shopping!";
+  static const String confirmEmailSubTitle =
+      "Congratulations! Your Account Awaits: Verify Your Email to Start Shopping and Experience a World of Unrivaled Deals and Personalized Offers.";
+  static const String emailNotReceivedMessage =
+      "Didn’t get the email? Check your junk/spam or resend it.";
+  static const String yourAccountCreatedTitle =
+      "Your account successfully created!";
+  static const String yourAccountCreatedSubTitle =
+      "Welcome to Your Ultimate Shopping Destination: Your Account is Created, Unleash the Joy of Seamless Online Shopping!";
 
-} 
+  // -- Add Recipie Screen
+  static const String addRecipe = "Add Recipe";
+  static const String uploadRecipieImage = "Upload your recipe image";
+  static const String description = "Description";
+  static const String difficuilty = "Difficuilty";
+  static const String cookingTime = "Cooking Time";
+  static const String noOfServes = "No of Serves";
+
+  static const String easy = "Easy";
+  static const String medium = "Medium";
+  static const String hard = "Hard";
+
+  // -- Add Ingredients Screen
+  static const String addIngredients = "Add Ingredients";
+  static const String ingredient = "Ingredient";
+
+  // -- Add Directions Screen
+  static const String addDirections = "Add Directions";
+  
+
+  // -- Add Optional Details Screen
+  static const String addMoreDetails = "Add More Details";
+  static const String youtubeLink = "Youtube Link";
+  static const String youtubeLinkHeading = "Add a youtube tutorial link";
+  static const String galleryHeading = "Add some stunning photos";
+  // static const String youtubeLink = "Youtube Link";
+}

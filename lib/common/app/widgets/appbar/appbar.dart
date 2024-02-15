@@ -1,14 +1,15 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
-import 'package:toast/utils/constants/colors.dart';
 import 'package:toast/utils/constants/sizes.dart';
 import 'package:toast/utils/devices/device_utility.dart';
 
-import 'user_profile_icon.dart';
 
 class JAppbar extends StatelessWidget implements PreferredSizeWidget {
-   JAppbar({super.key,  this.centerTitle = false, this.title});
+   JAppbar({super.key,  this.centerTitle = false, this.title, this.actions});
   final bool centerTitle;
   final Widget? title ;
+  List<Widget>? actions;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -16,9 +17,7 @@ class JAppbar extends StatelessWidget implements PreferredSizeWidget {
       child: AppBar(automaticallyImplyLeading: false,
       title: title,
       centerTitle: centerTitle,
-      actions: [
-        UserProfileIcon()
-      ],
+      actions: actions
       ),
     );
   }

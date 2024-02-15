@@ -1,28 +1,28 @@
 import 'package:flutter/material.dart';
-import '../../../../utils/constants/sizes.dart';
-import '../contollers/navigation_bar_controller.dart';
 
+class NavIcon extends StatelessWidget {
+  final Color color;
+  final double height;
+  final double width;
+  final IconData icons;
 
-class NavigationIcon extends StatelessWidget {
-   NavigationIcon({
-    super.key,
-    required this.icon, this.onPressed,
-  });
-  final controller = NavigationBarController();
-  final Widget icon;
-  final onPressed;
+  const NavIcon(
+      {super.key,
+      this.color = Colors.white,
+      this.height = 70,
+      this.width = 60,
+      required this.icons});
+
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: 
-       onPressed
-      ,
-      child: Container(
-        padding: const EdgeInsets.all(10),
-        decoration: BoxDecoration(
-            color: Colors.white.withOpacity(0.8),
-            borderRadius: BorderRadius.circular(JSize.borderRadMd)),
-        child: icon,
+    return SizedBox(
+      height: height,
+      width: width,
+      child: Center(
+        child: Icon(
+          icons,
+          color: color,
+        ),
       ),
     );
   }

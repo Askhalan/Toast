@@ -25,4 +25,8 @@ class JImages{
   static const String createdSUccessfully = "assets/images/animations/Celebration.gif";
   // static const String onBoardingImage2 = "assets/images/onboarding/Onboarding2.gif";
   // static const String onBoardingImage3 = "assets/images/on_boarding_images/";
+
+
+
+static const String defaultImage = "assets/images/defaultImage.webp";
 }
