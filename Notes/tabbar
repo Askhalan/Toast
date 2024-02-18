@@ -1,0 +1,86 @@
+ Theme(
+                  data: ThemeData.dark().copyWith(
+                    indicatorColor: Colors.deepPurpleAccent,
+                  ),
+                  child: Builder(builder: (context) {
+                    final theme = Theme.of(context);
+
+                    return Container(
+                      width: double.infinity,
+                      margin: const EdgeInsets.only(
+                        top: 40,
+                      ),
+                      padding: const EdgeInsets.all(20),
+                      color: theme.scaffoldBackgroundColor,
+                      child: Column(
+                        children: [
+                          _buildLabel('Dark Style', color: Colors.white70),
+                          Center(
+                            child: AdvancedSegment(
+                              controller: _selectedSegment_05,
+                              segments: const {
+                                'all': 'All',
+                                'missed': 'Missed',
+                              },
+                              backgroundColor: theme.cardColor,
+                              activeStyle: const TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.w600,
+                              ),
+                              inactiveStyle: const TextStyle(
+                                color: Colors.white,
+                              ),
+                              sliderColor: theme.indicatorColor,
+                            ),
+                          ),
+                          SizedBox(
+                            height: 128,
+                            child: Center(
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                      bottom: 8.0,
+                                    ),
+                                    child: Text(
+                                      'Selected segment:',
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .headlineSmall,
+                                    ),
+                                  ),
+                                  ValueListenableBuilder<String>(
+                                    valueListenable: _selectedSegment_05,
+                                    builder: (_, key, __) {
+                                      switch (key) {
+                                        case 'all':
+                                          return const Text(
+                                            'All calls',
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.w600,
+                                            ),
+                                          );
+                                        case 'missed':
+                                          return const Text(
+                                            'Missed calls',
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.w600,
+                                            ),
+                                          );
+                                        default:
+                                          return const SizedBox();
+                                      }
+                                    },
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    );
+                  }),
+                ),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:toast/utils/constants/colors.dart';
 
-import '../../../../../../common/app/widgets/decoration_items/constrained_container.dart';
+import '../../../../../../common/app/widgets/decoration_items/custom_containers/constrained_container.dart';
 import '../../../../../../utils/constants/sizes.dart';
 import '../../../../../../utils/constants/text_strings.dart';
 

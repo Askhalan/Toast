@@ -24,6 +24,8 @@ dependencies:
   smooth_page_indicator: ^1.1.0
   unicons: ^2.1.1
   floating_frosted_bottom_bar: ^0.0.1
+  glass: ^2.0.0+1
+  flutter_advanced_segment: ^3.0.2
 
 
   # Storage Packages 
@@ -38,9 +40,8 @@ dependencies:
 
   # State Management
   get: ^4.6.6
-  get_storage: ^2.1.1
+  get_storage: ^2.1.1   
   
-
 
 #----------------------- PACKAGES End -----------------------#
 
@@ -67,6 +68,7 @@ flutter:
     - assets/images/onboarding/
     - assets/images/animations/
     - assets/images/Temp/
+    - assets/images/TempFoodImages/
     # - assets/images/login_image.jpg
    
 

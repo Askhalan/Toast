@@ -6,8 +6,11 @@ import 'package:unicons/unicons.dart';
 
 import '../../../../utils/constants/sizes.dart';
 import '../../../../utils/devices/responsive.dart';
-import '../../2 feeds/screens/scn_home.dart';
+import '../../1 home/screens/scn_home.dart';
+import '../../2 explore/screens/scn_explore.dart';
 import '../../3 add_post/screens/1 add_recipe/scn_add_recipe.dart';
+import '../../4 grocesory/screens/grocesory_list_collection/scn_grocesory.dart';
+import '../../5 profile/screens/scn_user_profile.dart';
 import 'w_navigation_icon.dart';
 
 class NavBar extends StatelessWidget {
@@ -36,30 +39,11 @@ class NavBar extends StatelessWidget {
             dragStartBehavior: DragStartBehavior.down,
             physics: const BouncingScrollPhysics(),
             children: [
-              const ScnHome(),
-               
-              Container(
-                padding: const EdgeInsets.all(10),
-                color: const Color.fromARGB(255, 7, 255, 238),
-                child: ListView.builder(
-                  itemBuilder: (context, index) => Container(
-                    height: 100,
-                    width: double.infinity,
-                    color: Colors.green,
-                    margin: const EdgeInsets.all(10),
-                  ),
-                  controller: controller,
-                ),
-              ),
-              ScnAddRecipe(scrollController:controller ),
-              Container(
-                color: JColor.primary,
-              ),
-              Container(
-                color: JColor.primary,
-              ),
-             
-              
+               ScnHome(scrollController: controller),
+               ScnExplore(scrollController: controller),
+              ScnAddRecipe(scrollController: controller),
+              ScnGrocesory(scrollController: controller),
+              ScnUserProfile(scrollController: controller)
             ]);
       },
       child: TabBar(
@@ -74,16 +58,16 @@ class NavBar extends StatelessWidget {
               icons: UniconsLine.estate,
               color: currentPage == 0 ? JColor.primary : Colors.white),
           NavIcon(
-              icons:  UniconsLine.search,
+              icons: UniconsLine.search,
               color: currentPage == 1 ? JColor.primary : Colors.white),
           NavIcon(
-              icons:  UniconsLine.plus_square,
+              icons: UniconsLine.plus_square,
               color: currentPage == 2 ? JColor.primary : Colors.white),
           NavIcon(
-              icons:  UniconsLine.book,
+              icons: UniconsLine.book,
               color: currentPage == 3 ? JColor.primary : Colors.white),
           NavIcon(
-              icons:  UniconsLine.user,
+              icons: UniconsLine.user,
               color: currentPage == 4 ? JColor.primary : Colors.white),
         ],
       ),

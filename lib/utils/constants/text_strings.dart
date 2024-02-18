@@ -73,6 +73,19 @@ class JTexts {
   static const String yourAccountCreatedSubTitle =
       "Welcome to Your Ultimate Shopping Destination: Your Account is Created, Unleash the Joy of Seamless Online Shopping!";
 
+
+
+
+  // -- Home Screen
+  static const String userName = "Askhalan";
+
+
+  // -- Explore Screen
+  static const String exploreAppBarTitle = "Explore your taste";
+
+
+
+
   // -- Add Recipie Screen
   static const String addRecipe = "Add Recipe";
   static const String uploadRecipieImage = "Upload your recipe image";
@@ -98,5 +111,18 @@ class JTexts {
   static const String youtubeLink = "Youtube Link";
   static const String youtubeLinkHeading = "Add a youtube tutorial link";
   static const String galleryHeading = "Add some stunning photos";
-  // static const String youtubeLink = "Youtube Link";
+
+
+  // -- Grocesory List Screen
+  static const String grocesoryList = "Grocesory List";
+  static const String addItem = "Add Item";
+  
+
+  // -- User Profile Screen
+  static const String editProfile = "Edit Profile";
+  static const String settings = "Settings";
+  static const String toast = "Toast";
+  static const String followers = "Followers";
+  static const String following = "Following";
+
 }

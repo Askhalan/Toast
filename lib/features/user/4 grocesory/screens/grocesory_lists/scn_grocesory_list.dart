@@ -1,0 +1,57 @@
+// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
+
+import 'package:flutter/material.dart';
+import 'package:toast/common/app/widgets/appbar/appbar.dart';
+import 'package:toast/utils/constants/text_strings.dart';
+import 'package:toast/utils/devices/responsive.dart';
+
+import '../../../../../common/app/widgets/form elements/elevated_button.dart';
+import '../../../../../utils/constants/sizes.dart';
+import 'w_grocesory_list_tile.dart';
+
+class ScnGrocesoryList extends StatelessWidget {
+  const ScnGrocesoryList({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: JAppbar(
+        title: Text(
+          JTexts.grocesoryList,
+          style: Theme.of(context).textTheme.headlineMedium,
+        ),
+      ),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(JmSize.defaultSpace - 7),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              //-------------------------------------------------- ITEMS LISTS ----------------------------------------------------
+
+              SizedBox(
+                height: JFluid.percentHeight(context: context, percent: 81.5),
+                child: ListView.builder(
+                  itemCount: 10,
+                  itemBuilder: (BuildContext context, int index) {
+                    return GrocesoryListTile();
+                  },
+                ),
+              ),
+
+              //------------------------------------------------ ADD ITEM BUTTON --------------------------------------------------
+
+              JMElevatedButton(
+                text: JTexts.addItem,
+                icon: Icons.add,
+                onPressed: () {
+                  
+                },
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}

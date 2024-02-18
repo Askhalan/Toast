@@ -4,9 +4,9 @@ import 'package:toast/utils/constants/image_strings.dart';
 import 'package:toast/utils/constants/text_strings.dart';
 import 'package:unicons/unicons.dart';
 
-import '../../../../../common/web/widgets/gap.dart';
-import '../../../../../utils/constants/sizes.dart';
-import '../../../../../utils/devices/responsive.dart';
+import '../../../../../../common/web/widgets/gap.dart';
+import '../../../../../../utils/constants/sizes.dart';
+import '../../../../../../utils/devices/responsive.dart';
 
 class AddOptionalGallery extends StatelessWidget {
   const AddOptionalGallery({
