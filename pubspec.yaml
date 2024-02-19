@@ -26,6 +26,8 @@ dependencies:
   floating_frosted_bottom_bar: ^0.0.1
   glass: ^2.0.0+1
   flutter_advanced_segment: ^3.0.2
+  shimmer: ^3.0.0
+  image_picker: ^1.0.7
 
 
   # Storage Packages 
@@ -67,7 +69,6 @@ flutter:
     - assets/logos/
     - assets/images/onboarding/
     - assets/images/animations/
-    - assets/images/Temp/
     - assets/images/TempFoodImages/
     # - assets/images/login_image.jpg
    

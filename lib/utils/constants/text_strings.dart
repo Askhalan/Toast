@@ -29,7 +29,7 @@ class JTexts {
       "From Our Doorstep to Yours - Swift, Secure, and Contactless Delivery!";
 
   // -- Authentication Forms
-  static const String name = "Name";
+  static const String firstname = "First Name";
   static const String lastName = "Last Name";
   static const String email = "E-Mail";
   static const String password = "Password";
@@ -119,10 +119,15 @@ class JTexts {
   
 
   // -- User Profile Screen
-  static const String editProfile = "Edit Profile";
+  static const String editProfile = "Edit";
   static const String settings = "Settings";
   static const String toast = "Toast";
   static const String followers = "Followers";
   static const String following = "Following";
+
+
+ // -- Settings Screen
+  static const String accountDeleteWarningMessage = 'Are you sure you want to delete your account permanently? this action is not reversible and all of your data will be removed permanently';
+  static const String reAuthenticate = "Re-Authenticate";
 
 }

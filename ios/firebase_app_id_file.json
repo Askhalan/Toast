@@ -1,7 +1,7 @@
 {
   "file_generated_by": "FlutterFire CLI",
   "purpose": "FirebaseAppID & ProjectID for this Firebase app in this directory",
-  "GOOGLE_APP_ID": "1:576617208969:ios:dc337fcc3ac0adaff67a58",
-  "FIREBASE_PROJECT_ID": "askhalan-toast",
-  "GCM_SENDER_ID": "576617208969"
+  "GOOGLE_APP_ID": "1:81174192877:ios:6fac94eeca66a0fb88e2e4",
+  "FIREBASE_PROJECT_ID": "toast-recipe-app",
+  "GCM_SENDER_ID": "81174192877"
 }

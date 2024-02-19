@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "576617208969",
-    "project_id": "askhalan-toast",
-    "storage_bucket": "askhalan-toast.appspot.com"
+    "project_number": "81174192877",
+    "project_id": "toast-recipe-app",
+    "storage_bucket": "toast-recipe-app.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:576617208969:android:c10dde87306f3a23f67a58",
+        "mobilesdk_app_id": "1:81174192877:android:1f45acb181972c6688e2e4",
         "android_client_info": {
           "package_name": "com.example.toast"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBtlT_UP8QExOkTOh-AdciVgFWbujxjBfQ"
+          "current_key": "AIzaSyAyNe2yYNmNluyF-mYxzY7t8Yf0tXPYGk8"
         }
       ],
       "services": {

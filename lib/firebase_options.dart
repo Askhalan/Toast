@@ -47,29 +47,28 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBl5pTMFBSYP6ErxRTIOhkw21cXH1KPy4k',
-    appId: '1:576617208969:web:c87a5454d3738b2bf67a58',
-    messagingSenderId: '576617208969',
-    projectId: 'askhalan-toast',
-    authDomain: 'askhalan-toast.firebaseapp.com',
-    storageBucket: 'askhalan-toast.appspot.com',
-    measurementId: 'G-ZEZ6R14Q71',
+    apiKey: 'AIzaSyB023X03tnoB8E8mcjeffmgGzcp2alLdkM',
+    appId: '1:81174192877:web:fe6402105735bfd288e2e4',
+    messagingSenderId: '81174192877',
+    projectId: 'toast-recipe-app',
+    authDomain: 'toast-recipe-app.firebaseapp.com',
+    storageBucket: 'toast-recipe-app.appspot.com',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBtlT_UP8QExOkTOh-AdciVgFWbujxjBfQ',
-    appId: '1:576617208969:android:c10dde87306f3a23f67a58',
-    messagingSenderId: '576617208969',
-    projectId: 'askhalan-toast',
-    storageBucket: 'askhalan-toast.appspot.com',
+    apiKey: 'AIzaSyAyNe2yYNmNluyF-mYxzY7t8Yf0tXPYGk8',
+    appId: '1:81174192877:android:1f45acb181972c6688e2e4',
+    messagingSenderId: '81174192877',
+    projectId: 'toast-recipe-app',
+    storageBucket: 'toast-recipe-app.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyBgynlJfDkEucOt4cwzCN7syxIM26DKRu0',
-    appId: '1:576617208969:ios:dc337fcc3ac0adaff67a58',
-    messagingSenderId: '576617208969',
-    projectId: 'askhalan-toast',
-    storageBucket: 'askhalan-toast.appspot.com',
+    apiKey: 'AIzaSyBkVXZO6MJkNK6NInMFNOXgTPMqYNunH94',
+    appId: '1:81174192877:ios:6fac94eeca66a0fb88e2e4',
+    messagingSenderId: '81174192877',
+    projectId: 'toast-recipe-app',
+    storageBucket: 'toast-recipe-app.appspot.com',
     iosBundleId: 'com.example.toast',
   );
 }

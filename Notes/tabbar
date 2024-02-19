@@ -84,3 +84,47 @@
                     );
                   }),
                 ),
+
+
+
+
+
+
+
+
+
+
+
+
+                SettingsItem(
+                  onTap: () {},
+                  icons: Icons.dark_mode_rounded,
+                  iconStyle: IconStyle(
+                    iconsColor: Colors.white,
+                    withBackground: true,
+                    backgroundColor: Colors.red,
+                  ),
+                  title: 'Dark mode',
+                  subtitle: "Automatic",
+                  trailing: Switch.adaptive(
+                    value: false,
+                    onChanged: (value) {},
+                  ),
+                ),
+
+
+
+
+
+
+  // static Future createStudent(UserModel value, String docID) async {
+  //   final dbData = _db.doc(docID);
+  //   UserModel data = UserModel(
+  //       id: docID,
+  //       name: value.name,
+  //       username: value.username,
+  //       email: value.email,
+  //       password: value.password);
+  //   final dataToPass = data.tojson();
+  //   await dbData.set(dataToPass);
+  // }

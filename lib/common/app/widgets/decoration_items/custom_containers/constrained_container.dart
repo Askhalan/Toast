@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:toast/utils/constants/colors.dart';
-import 'package:toast/utils/constants/sizes.dart';
 
 class JTextFIeldContainer extends StatelessWidget {
   const JTextFIeldContainer({super.key, required this.child});
