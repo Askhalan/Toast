@@ -69,6 +69,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '81174192877',
     projectId: 'toast-recipe-app',
     storageBucket: 'toast-recipe-app.appspot.com',
+    androidClientId: '81174192877-6m0npfh5tkdpvpbmqu0c89rmmq45ucv1.apps.googleusercontent.com',
+    iosClientId: '81174192877-1r41b8uooal8sutk0np8k3ehvmojj1h2.apps.googleusercontent.com',
     iosBundleId: 'com.example.toast',
   );
 }

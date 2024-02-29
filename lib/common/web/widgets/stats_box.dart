@@ -26,7 +26,7 @@ final int stats;
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(title),
+                Text(title,style: JTexts.wBody,),
                 Text('$stats',style: JTexts.statValue,)
               ],
             ),

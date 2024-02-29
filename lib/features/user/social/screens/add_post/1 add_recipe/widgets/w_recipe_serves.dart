@@ -18,7 +18,7 @@ class AddRecipeServes extends StatelessWidget {
     super.key,
   });
 
-final controller = AddRecipeController();
+ final AddRecipeController controller = Get.find();
   @override
   Widget build(BuildContext context) {
     final isDark = JHelperFunctions.isDarkMode(context);

@@ -5,8 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:toast/utils/constants/colors.dart';
 import 'package:toast/utils/constants/sizes.dart';
 
-import '../../../features/admin/login/contollers/auth_controller.dart';
-
 class JButtonPrimary extends StatelessWidget {
   const JButtonPrimary(
       {super.key, required this.text, this.icon, this.onPressed});
@@ -21,7 +19,7 @@ class JButtonPrimary extends StatelessWidget {
         minWidth: 100.0, // Set your minimum width
         maxWidth: 400.0, // Set your maximum width
         minHeight: 43.0, // Set your minimum height
-        maxHeight: 55.0, // Set your maximum height
+        maxHeight: 45.0, // Set your maximum height
       ),
       child: ElevatedButton(
         onPressed:onPressed,

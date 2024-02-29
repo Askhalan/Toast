@@ -21,7 +21,7 @@ class ExploreHeader extends StatelessWidget {
       child: JPrimaryHeaderContainer(
         height: JFluid.percentHeight(context: context, percent: 20),
         child:  Column(
-          children: const [
+          children:  [
             //-------------------------------------------------- APP BAR --------------------------------------------------
     
             ExploreAppBar(),

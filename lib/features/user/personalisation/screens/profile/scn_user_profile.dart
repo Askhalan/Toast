@@ -53,8 +53,7 @@ class ScnUserProfile extends StatelessWidget {
                     ),
                     bottom: JTabbar(tabs: [
                       Tab(
-                        child: SizedBox(
-                            child: Text('Toasts')),
+                        child: Text('Toasts'),
                       ),
                       Tab(
                         child: Text('Cookbook'),

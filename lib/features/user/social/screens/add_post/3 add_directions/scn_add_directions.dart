@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:toast/common/app/widgets/appbar/appbar.dart';
 import 'package:toast/common/app/widgets/appbar/appbar_widgets/w_page_indicator.dart';
@@ -7,7 +9,8 @@ import 'widgets/w_directions_form.dart';
 import 'widgets/w_directions_processing_btns.dart';
 
 class ScnAddDirections extends StatelessWidget {
-  const ScnAddDirections({super.key});
+   const ScnAddDirections({super.key});
+
 
   @override
   Widget build(BuildContext context) {
@@ -24,10 +27,10 @@ class ScnAddDirections extends StatelessWidget {
           ),
         ],
       ),
-      body: const Padding(
+      body:  Padding(
         padding: EdgeInsets.all(JmSize.defaultSpace - 7),
         child: Column(
-          children: [
+          children:  const [
             //------------------------------------------------- INGREDIENT ADD FORM --------------------------------------------------
 
             AddDirectionsForm(),

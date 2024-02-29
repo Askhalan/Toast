@@ -32,7 +32,7 @@ class IngredientsProcessingButtons extends StatelessWidget {
             text: JTexts.next,
             icon: Icons.arrow_forward_ios,
             onPressed: () {
-              Get.to(() => const ScnAddDirections());
+              Get.to(() =>  ScnAddDirections());
             },
           ),
         ),

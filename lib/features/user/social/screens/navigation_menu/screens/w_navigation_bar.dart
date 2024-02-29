@@ -1,8 +1,16 @@
+// ignore_for_file: unused_local_variable, unused_import
+
 import 'package:floating_frosted_bottom_bar/floating_frosted_bottom_bar.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:toast/features/user/grocesory/screens/grocesory_list_collection/scn_grocesory.dart';
 import 'package:toast/features/user/personalisation/screens/profile/scn_user_profile.dart';
+import 'package:toast/features/user/social/controller/add_directions_controller.dart';
+import 'package:toast/features/user/social/controller/add_ingredients_controller.dart';
+import 'package:toast/features/user/social/controller/add_optional_controller.dart';
+import 'package:toast/features/user/social/controller/add_recipe_controller.dart';
+import 'package:toast/features/user/social/controller/post_controller.dart';
 import 'package:toast/features/user/social/screens/add_post/1%20add_recipe/scn_add_recipe.dart';
 import 'package:toast/features/user/social/screens/explore/scn_explore.dart';
 import 'package:toast/features/user/social/screens/home/scn_home.dart';
@@ -13,7 +21,7 @@ import 'package:unicons/unicons.dart';
 import 'w_navigation_icon.dart';
 
 class NavBar extends StatelessWidget {
-  const NavBar({
+  NavBar({
     super.key,
     required this.tabController,
     required this.currentPage,
@@ -21,7 +29,7 @@ class NavBar extends StatelessWidget {
 
   final TabController tabController;
   final int currentPage;
-
+  final postController = Get.put(PostController());
   @override
   Widget build(BuildContext context) {
     return FrostedBottomBar(

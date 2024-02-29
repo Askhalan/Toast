@@ -23,10 +23,12 @@ class JImages{
 
   // -- Annimated Giffs
   static const String createdSUccessfully = "assets/images/animations/Celebration.gif";
-  // static const String onBoardingImage2 = "assets/images/onboarding/Onboarding2.gif";
+  static const String loading = "assets/images/animations/Animation - 1708668385543.json";
   // static const String onBoardingImage3 = "assets/images/on_boarding_images/";
 
 
 
 static const String defaultImage = "assets/images/defaultImage.webp";
+
+static const String defaultProfileImage = 'assets/images/defaultUserImages.jpeg';
 }

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:toast/common/app/widgets/form%20elements/elevated_button.dart';
+import 'package:toast/features/user/social/controller/add_ingredients_controller.dart';
 import 'package:toast/utils/constants/sizes.dart';
 import 'package:toast/utils/constants/text_strings.dart';
 
@@ -11,6 +13,7 @@ class IngredientAddButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final AddIngredientsController controller = Get.find();
     return Flexible(
       child: JMElevatedButton(
         margin: const EdgeInsets.all(JmSize.spaceBtwInputFields),
@@ -18,7 +21,7 @@ class IngredientAddButton extends StatelessWidget {
         neverChangeTextColor: true,
         text: JTexts.addIngredients,
         // icon: Icons.add,
-        onPressed: () {},
+        onPressed: () {controller.addItem();},
       ),
     );
   }

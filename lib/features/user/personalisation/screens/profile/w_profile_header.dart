@@ -1,18 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:glass/glass.dart';
+import 'package:toast/common/app/widgets/loaders/shimmers/shimmer_effect.dart';
+import 'package:toast/features/user/personalisation/controller/user_controller.dart';
 import 'package:toast/features/user/personalisation/screens/settings/settings/scn_settings.dart';
+import 'package:toast/features/user/personalisation/screens/settings/settings/w_user_profile_image.dart';
 import 'package:toast/utils/constants/colors.dart';
+import 'package:toast/utils/constants/image_strings.dart';
 import 'package:toast/utils/constants/sizes.dart';
 import 'package:toast/utils/constants/text_strings.dart';
 import 'package:toast/utils/devices/responsive.dart';
 import 'package:toast/utils/helpers/helper_functions.dart';
 
 class ProfileHeader extends StatelessWidget {
-  const ProfileHeader({
+  ProfileHeader({
     super.key,
   });
-
+  final controller = UserController.instance;
   @override
   Widget build(BuildContext context) {
     final isDark = JHelperFunctions.isDarkMode(context);
@@ -41,19 +45,27 @@ class ProfileHeader extends StatelessWidget {
               children: [
                 //------------------------------ PROFILE PIC ------------------------------
 
-                Container(
+                SizedBox(
                   height: 100,
                   width: 100,
-                  decoration: BoxDecoration(
-                      color: Colors.blue,
-                      borderRadius: BorderRadius.circular(JSize.borderRadLg),
-                      image: const DecorationImage(image: AssetImage(''))),
+                  child: Obx(() {
+                    final networkImage = controller.user.value.profilePic;
+                    final image = networkImage.isNotEmpty
+                        ? networkImage
+                        : JImages.defaultProfileImage;
+                    return controller.imageUploading.value
+                        ? const JShimmerEffect(width: 100, height: 100)
+                        : UserProfileImage(
+                            image: image,
+                            isNetworkImage: networkImage.isNotEmpty,
+                          );
+                  }),
                 ),
               ],
             ),
           ),
         ),
-        
+
         //---------------------------- SETTINGS BUTTON ----------------------------
 
         Positioned(

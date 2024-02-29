@@ -11,7 +11,7 @@ class AddRecipeCookingTime extends StatelessWidget {
    AddRecipeCookingTime({
     super.key,
   });
- final controller = AddRecipeController();
+ final AddRecipeController controller = Get.find();
  
   @override
   Widget build(BuildContext context) {

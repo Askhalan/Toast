@@ -12,6 +12,7 @@ class SettingsBody extends StatelessWidget {
   });
  
  final controller = UserController.instance;
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -58,6 +59,31 @@ class SettingsBody extends StatelessWidget {
                   ),
                 ],
               )),
+          const JGap(
+            h: JmSize.spaceBtwItems,
+          ),
+
+          //---------------------------------------------- LOGOUT BTN ----------------------------------------
+    
+          GestureDetector(
+            onTap: () => controller.logoutUserWarningPopup(),
+            child: ElevatedTileContainer(
+                padding: const EdgeInsets.only(left: JmSize.defaultSpace * 2),
+                child: Row(
+                  children: [
+                    const Icon(
+                      UniconsLine.sign_out_alt,
+                    ),
+                    const JGap(
+                      w: 30.0,
+                    ),
+                    Text(
+                      'Logout',
+                      style: Theme.of(context).textTheme.headlineSmall,
+                    ),
+                  ],
+                )),
+          ),
           const JGap(
             h: JmSize.spaceBtwItems,
           ),

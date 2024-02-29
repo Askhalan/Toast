@@ -1,36 +1,37 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:toast/features/user/social/controller/add_directions_controller.dart';
 
 import 'w_add_directions_tile.dart';
 import 'w_directions_add_btn.dart';
 
-
-
 class AddDirectionsForm extends StatelessWidget {
-  const AddDirectionsForm({
-    super.key,
-  });
-
-  final int itemCount = 30;
-
+   const AddDirectionsForm({super.key});
+static AddDirectionsController get instance => Get.find();
   @override
   Widget build(BuildContext context) {
-    return Flexible(
-      child: ListView.builder(
-        shrinkWrap: true,
-        itemCount: itemCount,
-        // physics: NeverScrollableScrollPhysics(),
-        itemBuilder: (context, index) {
-          return index == itemCount - 1
-              ?
+    return Expanded(
+      child: Obx(
+        () {
+          return ListView.builder(
+            shrinkWrap: true,
+            itemCount: instance.itemCount.value + 1,
+            itemBuilder: (context, index) {
 
-              //--------------- INGREDIENT ADD BUTTON ---------------
+              return index == instance.itemCount.value
+                  ? 
+                  //--------------- DIRECTIONS ADD BUTTON ---------------
 
-              const DirectionsAddButton()
-              :
+                  const DirectionsAddButton()
 
-              //--------------- INGREDIENT ADD FIELD ---------------
+                  //--------------- DIRECTIONS ADD FIELD ---------------
 
-               AddDirectionsTile(index: index+1,);
+                  : AddDirectionsTile(
+                      index: index,
+                      textEditingController: instance.textControllers[index],
+                    );
+            },
+          );
         },
       ),
     );

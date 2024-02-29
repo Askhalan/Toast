@@ -23,11 +23,16 @@ dependencies:
   flutter_native_splash: ^2.3.10
   smooth_page_indicator: ^1.1.0
   unicons: ^2.1.1
+  lottie: ^3.1.0
   floating_frosted_bottom_bar: ^0.0.1
+  connectivity_plus: ^5.0.1
   glass: ^2.0.0+1
   flutter_advanced_segment: ^3.0.2
   shimmer: ^3.0.0
   image_picker: ^1.0.7
+  cached_network_image: ^3.3.1
+  flutter_slidable: ^3.0.1
+  google_sign_in: ^6.2.1
 
 
   # Storage Packages 

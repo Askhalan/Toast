@@ -29,27 +29,27 @@ class ScnAddOptionalDetails extends StatelessWidget {
           ),
         ],
       ),
-      body: const Padding(
-        padding: EdgeInsets.all(JmSize.defaultSpace - 7),
+      body:  Padding(
+        padding: const EdgeInsets.all(JmSize.defaultSpace - 7),
         child: SingleChildScrollView(
           child: Column(
             children: [
               //------------------------------------------------------- HEADER ---------------------------------------------------------
 
-              AddOptionalHeader(),
+              const AddOptionalHeader(),
                         
               //-------------------------------------------------- YOUTUBE VIDEO LINK --------------------------------------------------
                         
-              JGap(h: JmSize.spaceBtwSections),
-              AddOptionalYoutubeLink(),
+              const JGap(h: JmSize.spaceBtwSections),
+              const AddOptionalYoutubeLink(),
                         
               //-------------------------------------------------------- GALLERY -------------------------------------------------------
                         
-              JGap(h: JmSize.spaceBtwSections),
-              AddOptionalGallery(),
+              const JGap(h: JmSize.spaceBtwSections),
+              const AddOptionalGallery(),
           
               //-------------------------------------------------- PROCESSING BUTTONS --------------------------------------------------
-              JGap(h: JmSize.spaceBtwSections),
+              const JGap(h: JmSize.spaceBtwSections),
               AddOptionalProcessingButtons()
             ],
           ),

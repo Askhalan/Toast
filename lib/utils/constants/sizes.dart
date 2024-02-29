@@ -14,10 +14,10 @@ class JSize {
   // static const double titleSub = 20.0;
   // static const double body = 14.0;
 
-  // // Font Sizes For Web
-  // static const double titleWeb = 30.0;
-  // static const double titleSubWeb = 25.0;
-  // static const double bodyWeb = 14.0;
+  // Font Sizes For Web
+  static const double webDefaultSpace = 30.0;
+  static const double titleSubWeb = 25.0;
+  static const double bodyWeb = 14.0;
 
   // Icon Sizes
   static const double iconSm = 14.0;

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:toast/features/user/social/controller/add_recipe_controller.dart';
+import 'package:toast/features/user/social/controller/categeory_controller.dart';
 
 import 'package:toast/utils/constants/text_strings.dart';
 
@@ -14,7 +15,8 @@ class AddRecipeCategeorySelector extends StatelessWidget {
     super.key,
   });
 
-  final controller = AddRecipeController();
+  final categeoryController = CategeoryController();
+  final AddRecipeController controller = Get.find();
 
   @override
   Widget build(BuildContext context) {
@@ -43,15 +45,16 @@ class AddRecipeCategeorySelector extends StatelessWidget {
             child: Center(
               child: DropdownButton<String>(
                 isExpanded: true,
-                padding: EdgeInsets.all(JmSize.md),
+                padding: const EdgeInsets.all(JmSize.md),
                 onChanged: (newValue) {
                   controller.updateSelectedCategeory(newValue.toString());
                 },
                 hint: const Text(JTexts.choose),
 
-                ///----------- Writing a function to convert each list item into a list of objects  
-                ///----------- of type [DropdownMenuItem] which contains a value & a child
-                items: controller.categeoryList
+                ///----------- Writing a function to convert each list item into a list of objects
+                ///----------- of type [DropdownMenuItem which contains a value & a child
+              
+                items: controller.catNamesList
                     .map<DropdownMenuItem<String>>((String value) {
                   return DropdownMenuItem<String>(
                     value: value,
@@ -59,8 +62,8 @@ class AddRecipeCategeorySelector extends StatelessWidget {
                   );
                 }).toList(),
 
-                ///----------- Checking does the user selected anyvalue or not and 
-                ///----------- updating the value from the controller  
+                ///----------- Checking does the user selected anyvalue or not and
+                ///----------- updating the value from the controller
                 value: controller.selectedCategeory.value == " "
                     ? null
                     : controller.selectedCategeory.value,

@@ -11,7 +11,10 @@ import 'widgets/w_ingredients_processing_btn.dart';
 
 
 class ScnAddIngredients extends StatelessWidget {
-  const ScnAddIngredients({super.key});
+   ScnAddIngredients({super.key});
+
+   
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

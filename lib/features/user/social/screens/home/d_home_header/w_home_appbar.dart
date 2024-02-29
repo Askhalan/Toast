@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:toast/common/app/widgets/appbar/appbar.dart';
-import 'package:toast/common/app/widgets/loaders/shimmer_effect.dart';
+import 'package:toast/common/app/widgets/loaders/shimmers/shimmer_effect.dart';
 import 'package:toast/features/user/personalisation/controller/user_controller.dart';
 import 'package:toast/utils/constants/colors.dart';
 // import 'package:toast/utils/constants/sizes.dart';
 import 'package:unicons/unicons.dart';
 
 class HomeAppBar extends StatelessWidget {
-  const HomeAppBar({
+   HomeAppBar({
     super.key,
   });
-
+    final controller = Get.put(UserController());
   @override
   Widget build(BuildContext context) {
-    final controller = Get.put(UserController());
+
     return JAppbar(
       // horizontalpadding: JmSize.defaultSpace-15,
       title: Obx(() {

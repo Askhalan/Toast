@@ -58,7 +58,7 @@ class JwTextFormField extends StatelessWidget {
               borderSide:const BorderSide(color:JColor.secondary) 
             ), // Border decoration
             filled: filled,
-            fillColor: JColor.bgSecondary
+            fillColor: JColor.accent
         
           ),
         

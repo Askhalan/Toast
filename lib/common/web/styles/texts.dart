@@ -33,8 +33,13 @@ class JTexts {
       color: JColor.textPrimary);
 
   static const TextStyle wBody = TextStyle(
-      fontSize: JSize.fontSm,
+      fontSize: JSize.fontSm-2,
       // fontWeight: FontWeight.w600,
+      color: JColor.textPrimary);
+      
+      static const TextStyle wBodyLg = TextStyle(
+      fontSize: JSize.fontSm,
+      fontWeight: FontWeight.w600,
       color: JColor.textPrimary);
 
   // ----------------------- Navigation Styles -----------------------
@@ -42,12 +47,12 @@ class JTexts {
   static const TextStyle wNavItemSelected = TextStyle(
       fontSize: JSize.fontSm,
       fontWeight: FontWeight.w600,
-      color: JColor.primary);
+      color: JColor.textPrimary);
 
   static const TextStyle wNavItemNotSelected = TextStyle(
       fontSize: JSize.fontSm,
       // fontWeight: FontWeight.w600,
-      color: JColor.icon);
+      color: JColor.darkerGrey);
 
   static const TextStyle wNavItem = TextStyle(
       fontSize: JSize.fontSm,

@@ -3,19 +3,21 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:toast/data/repository/user_repository.dart';
-import 'package:toast/features/user/authentication/screens/login/scn_login.dart';
-import 'package:toast/features/user/authentication/screens/on_boarding/scn_onboarding.dart';
+import 'package:toast/features/admin/1-navigation/screen/scn_navigaton_bar.dart';
+import 'package:toast/features/authentication/screens/login/scn_login.dart';
+import 'package:toast/features/authentication/screens/on_boarding/scn_onboarding.dart';
+import 'package:toast/features/user/social/screens/navigation_menu/screens/nav_menu.dart';
 import 'package:toast/utils/exceptions/firebase_auth_exceptions.dart';
 import 'package:toast/utils/exceptions/format_exceptions.dart';
 import 'package:toast/utils/exceptions/platform_exceptions.dart';
-import '../../features/admin/login/screens/admin_login.dart';
 import '../../utils/exceptions/firebase_exceptions.dart';
 
 class AuthenticationRepository extends GetxController {
   static AuthenticationRepository get instance => Get.find();
 
-  final deviceStorage = GetStorage();
+  static final deviceStorage = GetStorage();
   final _auth = FirebaseAuth.instance;
   User? get authUser => _auth.currentUser;
 
@@ -29,22 +31,56 @@ class AuthenticationRepository extends GetxController {
 
   void screenRedirect() async {
     if (kIsWeb) {
-      Get.offAll(() => ALoginScn());
+      
+      Get.offAll(() => AScnNavigationBar());
     } else {
+
       deviceStorage.writeIfNull('isFirstTime', true);
       deviceStorage.read('isFirstTime') != true
-          ? Get.offAll(() => const ScnLogin())
+          ? deviceStorage.read('isLogedin') == true
+              ? Get.offAll(() => const NavigationMenu()) 
+              : Get.offAll(() => ScnLogin())
           : Get.offAll(() => const ScnOnBoarding());
     }
   }
 
-//-------------------------------------------- REGISTER USER -------------------------------------------
+//----------------------------------------------- REGISTER USER --------------------------------------------
 
   Future<UserCredential> registerUserWithEmail(
       String email, String password) async {
     try {
       return await _auth.createUserWithEmailAndPassword(
           email: email, password: password);
+    } on FirebaseAuthException catch (e) {
+      throw JFirebaseAuthException(e.code).message;
+    } on FirebaseException catch (e) {
+      throw JFirebaseException(e.code).message;
+    } on JFormatException catch (_) {
+      throw const JFormatException();
+    } on JPlatformException catch (e) {
+      throw JPlatformException(e.code).message;
+    } catch (e) {
+      throw 'something went wrong . Please try again';
+    }
+  }
+
+//-------------------------------------------- REGISTER USER -------------------------------------------
+
+  Future<UserCredential> signinWithGoogle() async {
+    try {
+      //--- gets the popup of all logged in gmail accounts
+      final GoogleSignInAccount? userAccount = await GoogleSignIn().signIn();
+
+      //--- Obtin the auth details from the request
+      final GoogleSignInAuthentication? googleAuth =
+          await userAccount?.authentication;
+
+      //--- create new credentails
+      final credentials = GoogleAuthProvider.credential(
+          accessToken: googleAuth?.accessToken, idToken: googleAuth?.idToken);
+
+      //--- Once signed in , return the userCredentails
+      return await _auth.signInWithCredential(credentials);
     } on FirebaseAuthException catch (e) {
       throw JFirebaseAuthException(e.code).message;
     } on FirebaseException catch (e) {
@@ -117,4 +153,24 @@ class AuthenticationRepository extends GetxController {
     }
   }
 
+  //-------------------------------------------- LOGOUT USER -------------------------------------------
+
+  Future logoutUser() async {
+    try {
+      deviceStorage.write('isLogedin', false);
+
+      await FirebaseAuth.instance.signOut();
+       print('printing from logoutUser -- from AuthRepository ++++---------------${deviceStorage.read('isLogedin')}');
+    } on FirebaseAuthException catch (e) {
+      throw JFirebaseAuthException(e.code).message;
+    } on FirebaseException catch (e) {
+      throw JFirebaseException(e.code).message;
+    } on JFormatException catch (_) {
+      throw const JFormatException();
+    } on JPlatformException catch (e) {
+      throw JPlatformException(e.code).message;
+    } catch (e) {
+      throw 'something went wrong . Please try again';
+    }
+  }
 }

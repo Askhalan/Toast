@@ -12,8 +12,8 @@ class AddRecipeCusineSelector extends StatelessWidget {
   AddRecipeCusineSelector({
     super.key,
   });
-
-  final controller = AddRecipeController();
+  AddRecipeController get controller => Get.find();
+  // final controller =  AddRecipeController();
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +50,7 @@ class AddRecipeCusineSelector extends StatelessWidget {
 
                 ///----------- Writing a function to convert each list item into a list of objects  
                 ///----------- of type [DropdownMenuItem] which contains a value & a child
-                items: controller.cusineList
+                items: controller.cusNamesList
                     .map<DropdownMenuItem<String>>((String value) {
                   return DropdownMenuItem<String>(
                     value: value,

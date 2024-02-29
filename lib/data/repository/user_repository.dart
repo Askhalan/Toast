@@ -129,4 +129,29 @@ class UserRepository extends GetxController {
       throw 'something went wrong . Please try again';
     }
   }
+
+
+  //------------------------------------- FUNCTION TO FETCH USER DETAILS BASED ON UID ------------------------------------
+
+  Future<UserModel> fetchAnyUserDetails(String uid) async {
+    try {
+      final documentSnapshot = await _db
+          .collection("users")
+          .doc(uid)
+          .get();
+      if (documentSnapshot.exists) {
+        return UserModel.fromSnapshot(documentSnapshot);
+      } else {
+        return UserModel.empty();
+      }
+    } on FirebaseException catch (e) {
+      throw JFirebaseException(e.code).message;
+    } on JFormatException catch (_) {
+      throw const JFormatException();
+    } on JPlatformException catch (e) {
+      throw JPlatformException(e.code).message;
+    } catch (e) {
+      throw 'something went wrong . Please try again';
+    }
+  }
 }

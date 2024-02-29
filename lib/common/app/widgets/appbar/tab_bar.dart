@@ -14,7 +14,7 @@ final List<Widget> tabs ;
     return Material(
       color: isDark  ? JColor.black :JColor.white  ,
       child: SizedBox(
-        height: 35,
+        height: 40,
         child: TabBar(
           tabs: tabs,
           indicatorColor: JColor.primary,
@@ -30,6 +30,5 @@ final List<Widget> tabs ;
   }
   
   @override
-  // TODO: implement preferredSize
-  Size get preferredSize => Size.fromHeight(JDeviceUtil.getAppBarHeight()/2);
+  Size get preferredSize => Size.fromHeight(JDeviceUtil.getAppBarHeight()*0.8);
 }

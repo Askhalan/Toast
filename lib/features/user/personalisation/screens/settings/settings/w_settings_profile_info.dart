@@ -1,8 +1,15 @@
+// ignore_for_file: avoid_print
+
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:glass/glass.dart';
+import 'package:toast/common/app/widgets/loaders/shimmers/shimmer_effect.dart';
 import 'package:toast/common/web/widgets/gap.dart';
 import 'package:toast/features/user/personalisation/controller/user_controller.dart';
 import 'package:toast/features/user/personalisation/screens/settings/edit_profile/w_profile_edit_button.dart';
+import 'package:toast/features/user/personalisation/screens/settings/settings/w_user_profile_image.dart';
+import 'package:toast/utils/constants/colors.dart';
+import 'package:toast/utils/constants/image_strings.dart';
 import 'package:toast/utils/constants/sizes.dart';
 import 'package:unicons/unicons.dart';
 
@@ -10,7 +17,7 @@ class SettingsProfileInformation extends StatelessWidget {
   SettingsProfileInformation({
     super.key,
   });
-  final controller = UserController.instance;
+  final UserController controller = Get.find();
   @override
   Widget build(BuildContext context) {
     // final isDark = JHelperFunctions.isDarkMode(context);
@@ -32,22 +39,36 @@ class SettingsProfileInformation extends StatelessWidget {
               children: [
                 //------------------------------------- PROFILE PIC ------------------------------------
 
-                Container(
-                  // padding: const EdgeInsets.only(bottom:JmSize.defaultSpace /4),
-                  height: 90,
-                  width: 90,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(JSize.borderRadLg),
-                      image: const DecorationImage(image: AssetImage('assets/images/defaultUserImages.jpeg'))
-                      ),
-                      child:  Column(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          IconButton(icon:const Icon(UniconsLine.camera_plus,size: 30 ,),onPressed: (){
-
-                          }),
-                        ],
-                      ),
+                Stack(
+                  children: [
+                    SizedBox(
+                      height: 90,width: 90,
+                      child: Obx(() {
+                        final networkImage = controller.user.value.profilePic;
+                        final image = networkImage.isNotEmpty
+                            ? networkImage
+                            : JImages.defaultProfileImage;
+                        return
+                         controller.imageUploading.value
+                        ? const JShimmerEffect(width: 90, height: 90) 
+                        : 
+                        UserProfileImage(image: image,isNetworkImage:networkImage.isNotEmpty,);
+                      }),
+                    ),
+                     Positioned(
+            bottom: -6,
+            right: -6,
+            child: IconButton(
+                icon: const Icon(
+                  UniconsLine.camera_plus,
+                  color: JColor.lightGrey,
+                  size: 30,
+                ).asGlass(clipBorderRadius: BorderRadius.circular(5)),
+                onPressed: () {
+                  controller.uploadUserProfilePicture();
+                }),
+          ),
+                  ],
                 ),
                 const JGap(
                   w: JmSize.spaceBtwSections,
