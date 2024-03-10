@@ -50,8 +50,8 @@ class NavBar extends StatelessWidget {
               ScnHome(scrollController: controller),
               ScnExplore(scrollController: controller),
               ScnAddRecipe(scrollController: controller),
-              // ScnGrocesory(scrollController: controller),
-              const ScnDetailedRecipeView(),
+              ScnGrocesory(scrollController: controller),
+              // const ScnDetailedRecipeView(),
               ScnUserProfile(scrollController: controller)
             ]);
       },

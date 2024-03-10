@@ -23,11 +23,11 @@ class UserController extends GetxController {
   final userRepository = Get.put(UserRepository());
 
   
-  RxList<UserModel> otherUsers = [UserModel.empty()].obs;
+  // RxList<UserModel> otherUsers = [UserModel.empty()].obs;
   final profileLoading = false.obs;
   RxBool imageUploading = false.obs;
   Rx<UserModel> user = UserModel.empty().obs;
-  Rx<UserModel> otheruser = UserModel.empty().obs;
+  Rx<UserModel> otherUser = UserModel.empty().obs;
   final email = TextEditingController();
   final password = TextEditingController();
   final reAuthFormKey = GlobalKey<FormState>();
@@ -47,6 +47,20 @@ class UserController extends GetxController {
       this.user(user);
     } catch (e) {
       user(UserModel.empty());
+    } finally {
+      profileLoading.value = false;
+    }
+  }
+
+   //----------------------------------------- FETCH USER WITH UID ------------------------------------
+  
+  Future fetchUserRecordWithUid(String uid) async {
+    try {
+      profileLoading.value = true;
+      final  user = await userRepository.fetchAnyUserDetails(uid);
+      otherUser(user);
+    } catch (e) {
+      otherUser(UserModel.empty());
     } finally {
       profileLoading.value = false;
     }
@@ -197,19 +211,4 @@ class UserController extends GetxController {
     }
   }
 
-
-    //----------------------------------------- FETCH Other USER DETAILS ------------------------------------
-  
-  // Future fetchOtherUserRecords(String uid) async {
-  //   try {
-  //     profileLoading.value = true;
-  //     final  user = await userRepository.fetchAnyUserDetails(uid);
-  //     otheruser(user);
-      
-  //   } catch (e) {
-  //     user(UserModel.empty());
-  //   } finally {
-  //     profileLoading.value = false;
-  //   }
-  // }
 }

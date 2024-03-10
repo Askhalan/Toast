@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 // import 'package:get/get.dart';
 // import 'package:get/get_rx/src/rx_types/rx_types.dart';
 import 'package:toast/common/web/widgets/gap.dart';
+import 'package:toast/features/user/personalisation/controller/user_controller.dart';
 // import 'package:toast/features/user/personalisation/model/user_model.dart';
 
 class FeedsHeader extends StatelessWidget {
-  const FeedsHeader({
+   FeedsHeader({
     super.key,
     //  required this.user,
   });
+  final UserController userController = Get.find();
 
 //  final  user;
   @override

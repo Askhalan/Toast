@@ -33,6 +33,7 @@ dependencies:
   cached_network_image: ^3.3.1
   flutter_slidable: ^3.0.1
   google_sign_in: ^6.2.1
+  flutter_rating_bar: ^4.0.1
 
 
   # Storage Packages 
@@ -40,6 +41,8 @@ dependencies:
   firebase_core: ^2.24.2
   firebase_storage: ^11.6.0
   cloud_firestore: ^4.14.0
+  hive:
+  hive_flutter:
 
   #Icons
   cupertino_icons: ^1.0.2
@@ -57,6 +60,9 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+  hive_generator:
+  build_runner:
 
   flutter_lints: ^3.0.1
 
