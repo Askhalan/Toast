@@ -11,9 +11,10 @@ import 'package:toast/features/user/social/controller/add_ingredients_controller
 import 'package:toast/features/user/social/controller/add_optional_controller.dart';
 import 'package:toast/features/user/social/controller/add_recipe_controller.dart';
 import 'package:toast/features/user/social/controller/post_controller.dart';
-import 'package:toast/features/user/social/screens/add_post/1%20add_recipe/scn_add_recipe.dart';
-import 'package:toast/features/user/social/screens/explore/scn_explore.dart';
-import 'package:toast/features/user/social/screens/home/scn_home.dart';
+import 'package:toast/features/user/social/screens/1.2%20Recipe_view/recipe_view/scn_recipe_view.dart';
+import 'package:toast/features/user/social/screens/3%20add_post/1%20add_recipe/scn_add_recipe.dart';
+import 'package:toast/features/user/social/screens/2%20explore/scn_explore.dart';
+import 'package:toast/features/user/social/screens/1%20home/scn_home.dart';
 import 'package:toast/utils/constants/colors.dart';
 import 'package:toast/utils/constants/sizes.dart';
 import 'package:toast/utils/devices/responsive.dart';
@@ -49,7 +50,8 @@ class NavBar extends StatelessWidget {
               ScnHome(scrollController: controller),
               ScnExplore(scrollController: controller),
               ScnAddRecipe(scrollController: controller),
-              ScnGrocesory(scrollController: controller),
+              // ScnGrocesory(scrollController: controller),
+              const ScnDetailedRecipeView(),
               ScnUserProfile(scrollController: controller)
             ]);
       },

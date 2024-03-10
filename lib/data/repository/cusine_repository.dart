@@ -1,8 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:get/get.dart';
-import 'package:toast/data/repository/auth_repository.dart';
-import 'package:toast/features/user/social/models/categeory_model.dart';
 import 'package:toast/features/user/social/models/cusine_model.dart';
 import 'package:toast/utils/exceptions/firebase_exceptions.dart';
 import 'package:toast/utils/exceptions/format_exceptions.dart';

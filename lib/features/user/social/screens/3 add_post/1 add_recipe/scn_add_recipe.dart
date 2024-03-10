@@ -10,9 +10,9 @@ import 'package:toast/features/user/social/controller/add_directions_controller.
 import 'package:toast/features/user/social/controller/add_ingredients_controller.dart';
 import 'package:toast/features/user/social/controller/add_optional_controller.dart';
 import 'package:toast/features/user/social/controller/add_recipe_controller.dart';
-import 'package:toast/features/user/social/screens/add_post/1%20add_recipe/widgets/w_recipe_categeory_selector.dart';
-import 'package:toast/features/user/social/screens/add_post/1%20add_recipe/widgets/w_recipe_cuisine_selector.dart';
-import 'package:toast/features/user/social/screens/add_post/1%20add_recipe/widgets/w_recipe_serves.dart';
+import 'package:toast/features/user/social/screens/3%20add_post/1%20add_recipe/widgets/w_recipe_categeory_selector.dart';
+import 'package:toast/features/user/social/screens/3%20add_post/1%20add_recipe/widgets/w_recipe_cuisine_selector.dart';
+import 'package:toast/features/user/social/screens/3%20add_post/1%20add_recipe/widgets/w_recipe_serves.dart';
 import 'package:toast/utils/constants/sizes.dart';
 import 'package:toast/utils/constants/text_strings.dart';
 import '../2 add_ingredients/scn_add_ingredients.dart';

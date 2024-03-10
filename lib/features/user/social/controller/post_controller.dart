@@ -9,7 +9,7 @@ import 'package:toast/features/user/social/controller/add_ingredients_controller
 import 'package:toast/features/user/social/controller/add_optional_controller.dart';
 import 'package:toast/features/user/social/controller/add_recipe_controller.dart';
 import 'package:toast/features/user/social/models/post_model.dart';
-import 'package:toast/features/user/social/screens/navigation_menu/screens/nav_menu.dart';
+import 'package:toast/features/user/social/screens/0%20navigation_menu/screens/nav_menu.dart';
 import 'package:toast/utils/constants/image_strings.dart';
 import 'package:toast/utils/popups/full_screen_loaders.dart';
 import 'package:toast/utils/popups/snackbars.dart';

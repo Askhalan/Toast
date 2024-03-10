@@ -8,7 +8,7 @@ import 'package:toast/common/app/widgets/texts/section_heading.dart';
 import 'package:toast/common/web/widgets/gap.dart';
 import 'package:toast/features/user/social/controller/categeory_controller.dart';
 import 'package:toast/features/user/social/controller/post_controller.dart';
-import 'package:toast/features/user/social/screens/filtered/categeory_based/scn_categery_view.dart';
+import 'package:toast/features/user/social/screens/2.1%20filtered/categeory_based/scn_categery_view.dart';
 import 'package:toast/utils/constants/colors.dart';
 import 'package:toast/utils/constants/sizes.dart';
 

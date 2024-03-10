@@ -8,7 +8,6 @@ import 'package:toast/utils/constants/colors.dart';
 import 'package:toast/utils/constants/paddings.dart';
 
 import '../../../../common/web/widgets/gap.dart';
-import '../../2 a_home/screens/widgets/bar_chart/bar_chart_container.dart';
 import 'widgets/reported_posts_container.dart';
 
 class AScnPostManagement extends StatelessWidget {

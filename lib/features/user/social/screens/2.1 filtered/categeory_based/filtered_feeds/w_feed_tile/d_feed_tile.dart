@@ -5,7 +5,6 @@ import 'package:get/get.dart';
 import 'package:toast/common/web/widgets/gap.dart';
 import 'package:toast/features/user/personalisation/controller/user_controller.dart';
 import 'package:toast/features/user/social/models/post_model.dart';
-import 'package:toast/features/user/social/screens/recipe/ingeridents_view/recipe_ingeridents_view_screen.dart';
 import 'package:toast/utils/constants/sizes.dart';
 import 'w_feed_body.dart';
 import 'w_feed_footer.dart';
@@ -24,7 +23,7 @@ class FeedItemTile extends StatelessWidget {
     // useController.fetchOtherUserRecords(post.uid!);
     return GestureDetector(
       onTap: (){
-        Get.to(()=>RecipeIngeridentsViewScreen());
+        // Get.to(()=>RecipeIngeridentsViewScreen());
         // create a post details page and pass the variable post to it
       },
       child:  Card(

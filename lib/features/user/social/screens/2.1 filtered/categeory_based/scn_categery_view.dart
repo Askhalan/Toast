@@ -1,8 +1,8 @@
 import 'dart:core';
 
 import 'package:flutter/material.dart';
-import 'package:toast/features/user/social/screens/filtered/categeory_based/d_filtered_header/d_filtered_header.dart';
-import 'package:toast/features/user/social/screens/filtered/categeory_based/filtered_feeds/w_filtered_feeds_section.dart';
+import 'package:toast/features/user/social/screens/2.1%20filtered/categeory_based/d_filtered_header/d_filtered_header.dart';
+import 'package:toast/features/user/social/screens/2.1%20filtered/categeory_based/filtered_feeds/w_filtered_feeds_section.dart';
 
 
 
