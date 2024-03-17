@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../common/app/widgets/decoration_items/custom_containers/primary_header_container.dart';
-import '../../../../../common/app/widgets/decoration_items/custom_containers/search_container.dart';
 import '../../../../../common/web/widgets/gap.dart';
 import '../../../../../utils/constants/sizes.dart';
 import '../../../../../utils/devices/responsive.dart';
@@ -20,6 +19,7 @@ class GrocesoryHeader extends StatelessWidget {
         height: JFluid.percentHeight(context: context, percent: 20),
         child: const Column(
           children: [
+            
             //-------------------------------------------------- APP BAR --------------------------------------------------
     
             GrocesoryAppBar(),
@@ -27,7 +27,7 @@ class GrocesoryHeader extends StatelessWidget {
     
             //------------------------------------------------- SEARCH BAR ------------------------------------------------
     
-            JSearchbarContainer(text: 'Find your list '),
+            // JSearchbarContainer(text: 'Find your list '),
             JGap(h: JmSize.spaceBtwSections),
           ],
         ),

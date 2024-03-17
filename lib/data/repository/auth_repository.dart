@@ -8,7 +8,7 @@ import 'package:toast/data/repository/user_repository.dart';
 import 'package:toast/features/admin/1-navigation/screen/scn_navigaton_bar.dart';
 import 'package:toast/features/authentication/screens/login/scn_login.dart';
 import 'package:toast/features/authentication/screens/on_boarding/scn_onboarding.dart';
-import 'package:toast/features/user/social/screens/0%20navigation_menu/screens/nav_menu.dart';
+import 'package:toast/features/user/social/screens/navigation_menu/screens/nav_menu.dart';
 import 'package:toast/utils/exceptions/firebase_auth_exceptions.dart';
 import 'package:toast/utils/exceptions/format_exceptions.dart';
 import 'package:toast/utils/exceptions/platform_exceptions.dart';

@@ -1,36 +1,46 @@
 // ignore_for_file: prefer_const_constructors, avoid_print
 
+import 'dart:developer';
+
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:toast/data/repository/auth_repository.dart';
 import 'package:toast/data/repository/user_repository.dart';
+import 'package:toast/data/services/mail_sevices.dart';
 import 'package:toast/features/authentication/screens/login/scn_login.dart';
 import 'package:toast/features/user/personalisation/model/user_model.dart';
 import 'package:toast/features/user/personalisation/screens/settings/settings/scn_reauthenticate_user.dart';
-// import 'package:toast/features/user/social/controller/add_recipe_controller.dart';
 import 'package:toast/utils/constants/colors.dart';
 import 'package:toast/utils/constants/image_strings.dart';
 import 'package:toast/utils/constants/sizes.dart';
 import 'package:toast/utils/constants/text_strings.dart';
 import 'package:toast/utils/popups/full_screen_loaders.dart';
 import 'package:toast/utils/popups/snackbars.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 
 class UserController extends GetxController {
   static UserController get instance => Get.find();
   final userRepository = Get.put(UserRepository());
+  final mailServices = Get.put(MailServices());
+  
+
 
   
-  // RxList<UserModel> otherUsers = [UserModel.empty()].obs;
+    final _db = FirebaseFirestore.instance;
   final profileLoading = false.obs;
   RxBool imageUploading = false.obs;
+  RxBool bannerImageUploading = false.obs;
   Rx<UserModel> user = UserModel.empty().obs;
   Rx<UserModel> otherUser = UserModel.empty().obs;
   final email = TextEditingController();
   final password = TextEditingController();
   final reAuthFormKey = GlobalKey<FormState>();
+
+
 
   @override
   void onInit() {
@@ -54,17 +64,20 @@ class UserController extends GetxController {
 
    //----------------------------------------- FETCH USER WITH UID ------------------------------------
   
-  Future fetchUserRecordWithUid(String uid) async {
-    try {
-      profileLoading.value = true;
-      final  user = await userRepository.fetchAnyUserDetails(uid);
-      otherUser(user);
-    } catch (e) {
-      otherUser(UserModel.empty());
-    } finally {
-      profileLoading.value = false;
-    }
+Future<UserModel> fetchUserRecordWithUid(String uid) async {
+  try {
+    profileLoading.value = true;
+    final user = await userRepository.fetchAnyUserDetails(uid);
+    otherUser(user);
+    return user;
+  } catch (e) {
+    otherUser(UserModel.empty());
+    throw e;
+  } finally {
+    profileLoading.value = false;
   }
+}
+
 
   //---------------------------- SAVE USER RECORD FROM ANY REGISTRATION PROVIDER ----------------------
 
@@ -85,7 +98,9 @@ class UserController extends GetxController {
             gender: '',
             username: username,
             email: userCredential.user!.email ?? '',
-            profilePic:  userCredential.user!.photoURL ?? '');
+            profilePic:  userCredential.user!.photoURL ?? '', 
+            bannerPic: '', 
+            bio: '');
 
         //Save User Record
 
@@ -120,6 +135,32 @@ class UserController extends GetxController {
           title: 'Error', message: 'Something went wrong: $e');
     } finally {
       imageUploading.value = false;
+    }
+  }
+
+    //----------------------------------------- UPLOAD BANNER PIC ------------------------------------
+
+  Future<void> uploadUserBannerPicture() async {
+    try {
+      final image = await ImagePicker()
+          .pickImage(source: ImageSource.gallery, imageQuality: 70);
+      if (image != null) {
+        bannerImageUploading.value = true;
+        final imageUrl =
+            await userRepository.uploadImage('Users/Images/Profile/', image);
+        Map<String, dynamic> json = {'BannerPic': imageUrl};
+        await userRepository.updateSingleField(json);
+        user.value.bannerPic = imageUrl;
+        user.refresh();
+        JMessages.snackbarSuccess(
+            title: 'Congratulation',
+            message: 'Your Banner Image has been updated');
+      }
+    } catch (e) {
+      JMessages.snackbarerror(
+          title: 'Error', message: 'Something went wrong: $e');
+    } finally {
+      bannerImageUploading.value = false;
     }
   }
 
@@ -192,7 +233,7 @@ class UserController extends GetxController {
     }
   }
 
-//----------------------------------------- RE-AUTHENTICATE USER METHOD ------------------------------------
+//----------------------------------------- RE-AUTHENTICATE USER METHOD -----------------------------------
 
   Future reAuthenticateEmailAndPassworduser() async {
     try {
@@ -205,10 +246,60 @@ class UserController extends GetxController {
       await AuthenticationRepository.instance
           .reAuthenticateEmailAndPasswordUser(email.text, password.text);
       await AuthenticationRepository.instance.deleteAccount();
+      await deleteCurrentuserPosts();
+      log('Currrent User Delete Post function Has been Called -----');
       Get.off(() => ScnLogin());
     } catch (e) {
       JMessages.snackbarerror(title: 'Error', message: e.toString());
     }
   }
+
+
+//----------------------------------------- WRITE APP REVIEW -----------------------------------
+
+
+Future<void> writeFeedback() async {
+  final Uri emailUrl = Uri(
+    scheme: 'mailto',
+    path: 'askhalan.aj@gmail.com',
+    queryParameters: {
+      'subject': 'Feedback About Toast',
+    },
+  );
+
+  if (await canLaunchUrl(emailUrl)) {
+    await launchUrl(emailUrl);
+  } else {
+    throw 'Could not launch email client';
+  }
+}
+
+//------------------------------------------------- DELETE CURRENT USER POST ---------------------------------
+
+Future<void> deleteCurrentuserPosts() async {
+  try {
+    log('Printing from the deleting function');
+    // Get a reference to the Firestore collection
+    CollectionReference usersCollection = _db.collection('posts');
+
+    // Query the documents that match the specific UID
+    QuerySnapshot querySnapshot = await usersCollection.where('UserId', isEqualTo: user.value.id).get();
+
+    // Create a batch
+    WriteBatch batch = _db.batch();
+
+    // Add each document to the batch for deletion
+    for (var doc in querySnapshot.docs) {
+      batch.delete(doc.reference);
+    }
+
+    // Commit the batch to delete all the documents in one operation
+    await batch.commit();
+    
+    print('All posts of ${user.value.username} has deleted successfully');
+  } catch (e) {
+    print('Error deleting documents: $e'); 
+  }
+}
 
 }

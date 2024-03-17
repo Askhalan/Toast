@@ -59,7 +59,9 @@ class SignupController extends GetxController {
           email: email.text,
           firstName: firstName.text,
           lastName: lastName.text,
-          gender: gender.text, profilePic: '');
+          gender: gender.text, profilePic: '', 
+          bannerPic: '', 
+          bio: '');
 
       final userRepository = Get.put(UserRepository());
       await userRepository.saveUserRecord(newUser);

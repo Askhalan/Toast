@@ -31,7 +31,7 @@ class ScnUserProfile extends StatelessWidget {
                     backgroundColor: JHelperFunctions.isDarkMode(context)
                         ? JColor.black
                         : JColor.white,
-                    expandedHeight: 540,
+                    expandedHeight: 390,
                     flexibleSpace: Padding(
                       padding: EdgeInsets.all(0),
                       child: ListView(
@@ -44,7 +44,7 @@ class ScnUserProfile extends StatelessWidget {
 
                           //-------------------------------------------------- USER INFO --------------------------------------------------
 
-                          JGap(h: JmSize.spaceBtwSections * 2),
+                          JGap(h: JmSize.spaceBtwSections),
                           ProfileUserInfo(),
 
                           //---------------------------------------------------- POSTS ----------------------------------------------------

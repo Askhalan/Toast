@@ -1,59 +1,68 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:toast/features/user/grocesory/contollers/grocesory_controller.dart';
 import 'package:unicons/unicons.dart';
 
 import '../../../../../utils/constants/colors.dart';
 import '../../../../../utils/constants/sizes.dart';
 
 class GrocesoryListTile extends StatelessWidget {
-  const GrocesoryListTile({
-    super.key,
-  });
+  GrocesoryListTile({
+    Key? key,
+    required this.ingredient,
+  }) : super(key: key);
+
+  final GrocesoryController grocesoryController = Get.find();
+  final String ingredient;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.symmetric(vertical: JmSize.spaceBtwInputFields*0.5),
-      height: 100,
-      padding: const EdgeInsets.all(JmSize.defaultSpace-15),
-      decoration: BoxDecoration(
-        // color: Color.fromARGB(255, 122, 211, 255),
-        borderRadius: BorderRadius.circular(JmSize.borderRadiusLg),
-        border: Border.all(color: JColor.secondary)
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-    
-        //------------------------------ ITEM IMAGE ------------------------------
-    
-        AspectRatio(aspectRatio: 1/1,
-          child: Container(
-            decoration: BoxDecoration(
-              color: JColor.primary,
-              borderRadius: BorderRadius.circular(JSize.borderRadLg),
-              // image: DecorationImage(image: )
-            ),
-          ),
+    return Obx(() {
+      final bool isSelected = grocesoryController.isSelected(ingredient);
+      return Container(
+        margin: const EdgeInsets.symmetric(
+          vertical: JmSize.spaceBtwInputFields * 0.5,
         ),
-    
-        //----------------------------- ITEM DETAILS -----------------------------
-    
-        Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.start,
+        padding: const EdgeInsets.all(JmSize.defaultSpace - 15),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(JmSize.borderRadiusLg),
+          border: Border.all(color: JColor.secondary),
+        ),
+        
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text('Wheat Flour',style: Theme.of(context).textTheme.headlineSmall,),
-            Text('500 gm',style: Theme.of(context).textTheme.titleMedium,)
-    
+            Padding(
+              padding: const EdgeInsets.only(left: 15),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    ingredient,
+                    style: TextStyle(
+                      decoration:
+                          isSelected ? TextDecoration.lineThrough : null,
+                      color: isSelected ? JColor.success : null,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            IconButton(
+              onPressed: () {
+                grocesoryController.toggleIngredient(ingredient);
+              },
+              icon: isSelected
+                  ? const Icon(
+                      UniconsLine.check_circle,
+                      color: JColor.success,
+                    )
+                  : const Icon(UniconsLine.circle),
+            )
           ],
         ),
-    
-        //------------------------------DELETE BUTTON -----------------------------
-    
-        IconButton(onPressed: (){}, icon: const Icon(UniconsLine.trash_alt) )
-    
-      
-      ]),
-    );
+      );
+    });
   }
 }

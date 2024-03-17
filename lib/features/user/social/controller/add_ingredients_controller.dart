@@ -8,8 +8,8 @@ final List<TextEditingController> textControllers = [];
 
 
   // List of strings to store the text from text editing controllers
-  List<String> getTextList() {
-    List<String> textList = [];
+  List getTextList() {
+    List textList = [];
     for (TextEditingController controller in textControllers) {
       textList.add(controller.text);
     }
@@ -49,5 +49,5 @@ final List<TextEditingController> textControllers = [];
     super.onClose();
   }
 
-
 }
+

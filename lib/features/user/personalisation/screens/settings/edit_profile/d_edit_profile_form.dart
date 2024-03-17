@@ -13,9 +13,10 @@ class EditProfileForm extends StatelessWidget {
   EditProfileForm({
     super.key,
   });
+  final UpdateUserController controller = Get.find();
   @override
   Widget build(BuildContext context) {
-    final controller = Get.put(UpdateUserController());
+    
     return Form(
       key: controller.updateProfileFormKey,
       child: Column(
@@ -52,7 +53,8 @@ class EditProfileForm extends StatelessWidget {
           const JGap(
             h: JmSize.spaceBtwSections *4,
           ),
-          JMElevatedButton(text: 'Save Changes', onPressed: ()=> controller.updateProfileDetails()),
+          JMElevatedButton(text: 'Save Changes', onPressed: ()=> controller.updateProfileDetails()
+          ),
           
         ],
       ),

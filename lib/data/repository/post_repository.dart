@@ -74,13 +74,13 @@ class PostRepository extends GetxController {
   }
 
   //--------------------------------------------- FUNCTION TO FETCH CURRENT USER POSTS ---------------------------------------------
-  Future<List<PostModel>> getUserPosts() async {
+  Future<List<PostModel>> getUserPosts(String uid) async {
     try {
       // final snapshot = await _db.collection('posts').where('isFeatured' , isEqualTo: true ).limit(10).get();
       final snapshot = await _db
           .collection('posts')
           .where('UserId',
-              isEqualTo:'QzcVMWeJesZxR56atHJzS7V7pzG3')
+              isEqualTo:uid)
           .orderBy('CreatedAt', descending: true)
           .get();
       log('$snapshot');
@@ -95,6 +95,8 @@ class PostRepository extends GetxController {
       throw 'something went wrong . Please try again ';
     }
   }
+
+  //------------------------------------------- FUNCTION TO DELETE CURRENT USER ALL POSTS ---------------------------------------------
+
 }
 
-// AuthenticationRepository.instance.authUser?.uid

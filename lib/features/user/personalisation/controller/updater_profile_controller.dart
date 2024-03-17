@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:toast/data/repository/user_repository.dart';
 import 'package:toast/features/user/personalisation/controller/user_controller.dart';
-import 'package:toast/features/user/personalisation/screens/profile/scn_user_profile.dart';
+import 'package:toast/features/user/social/screens/navigation_menu/screens/nav_menu.dart';
 import 'package:toast/utils/popups/snackbars.dart';
 
 class UpdateUserController extends GetxController{
@@ -16,6 +16,9 @@ class UpdateUserController extends GetxController{
   final lastName = TextEditingController();
   final username = TextEditingController();
   final gender = TextEditingController();
+  FocusNode focusNode = FocusNode();
+  final bioTextController = TextEditingController();
+  RxBool isBioEditable = false.obs;
 
 
   GlobalKey<FormState> updateProfileFormKey = GlobalKey<FormState>();
@@ -35,7 +38,7 @@ class UpdateUserController extends GetxController{
 
   }
 
-    //------------ Methods ------------
+  //------------------------------------------ Update Profile Details -------------------------------------
 
   updateProfileDetails() async {
     try {
@@ -51,11 +54,34 @@ class UpdateUserController extends GetxController{
       userController.user.value.lastName = lastName.text;
       userController.user.value.username = username.text;
 
-      Get.to(() => const ScnUserProfile());
+      Get.offAll(() => const NavigationMenu());
     } catch (e) {
       JMessages.snackbarerror(title: 'Error', message: e.toString());
     }
   }
+
+  //-------------------------------------------- Update Bio  ----------------------------------------
+
+  updateBio() async {
+    try {
+
+      Map<String, dynamic> profileDetails = { 'Bio':bioTextController.text,};
+      await userRepository.updateSingleField(profileDetails);
+
+      userController.user.value.bio = bioTextController.text;
+
+      Get.offAll(() => const NavigationMenu());
+    } catch (e) {
+      JMessages.snackbarerror(title: 'Error', message: e.toString());
+    }
+  }
+
+//------------------------------------------ Toggle Bio Editable -------------------------------------
+
+void toggleBioeditable(){
+  isBioEditable.value = !isBioEditable.value;
+}
+
 
 
 }

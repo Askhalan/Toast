@@ -1,6 +1,5 @@
 
 import 'package:flutter/material.dart';
-import 'package:toast/common/app/widgets/decoration_items/custom_containers/bg_image_container.dart';
 import 'package:toast/utils/constants/sizes.dart';
 
 
@@ -27,7 +26,8 @@ class ProfileCookbookSection extends StatelessWidget {
         itemBuilder: (BuildContext context, int index) {
           return const Card(
             elevation: 10,
-              child: TempBgImageContainer(image: 'assets/images/TempFoodImages/pexels-valeria-boltneva-1639556.jpg',));
+              // child: TempBgImageContainer(image: 'assets/images/TempFoodImages/pexels-valeria-boltneva-1639556.jpg',)
+              );
         },
       ),
     );

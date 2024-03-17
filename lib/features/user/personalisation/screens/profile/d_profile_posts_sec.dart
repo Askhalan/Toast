@@ -23,6 +23,7 @@ class ProfilePostsSection extends StatelessWidget {
           return const PostShimmer();
         }
         if (postController.currentUserPosts.isEmpty) {
+         log('Length---- of the list------${postController.currentUserPosts.length}');
           return Center(
             child: Text(
               'Add some posts',
@@ -30,7 +31,7 @@ class ProfilePostsSection extends StatelessWidget {
             ),
           );
         }
-        log('Length---- of the list------${postController.currentUserPosts.length}');
+        
         return GridView.builder(
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
@@ -51,3 +52,4 @@ class ProfilePostsSection extends StatelessWidget {
     );
   }
 }
+

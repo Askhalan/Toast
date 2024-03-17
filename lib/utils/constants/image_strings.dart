@@ -29,6 +29,7 @@ class JImages{
 
 
 static const String defaultImage = "assets/images/defaultImage.webp";
+static const String defaultBannerImage = "assets/images/default/defaultbanner.png";
 
 static const String defaultProfileImage = 'assets/images/defaultUserImages.jpeg';
 }

@@ -6,7 +6,7 @@ import 'package:toast/utils/constants/image_strings.dart';
 import 'package:toast/utils/helpers/network_manager.dart';
 import 'package:toast/utils/popups/full_screen_loaders.dart';
 import '../../../utils/popups/snackbars.dart';
-import '../../user/social/screens/0 navigation_menu/screens/nav_menu.dart';
+import '../../user/social/screens/navigation_menu/screens/nav_menu.dart';
 
 class LoginController extends GetxController {
   static LoginController get instance => Get.find();

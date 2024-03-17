@@ -43,22 +43,27 @@ class SettingsBody extends StatelessWidget {
     
           //---------------------------------------------- FEEDBACK ----------------------------------------
     
-          ElevatedTileContainer(
-              padding: const EdgeInsets.only(left: JmSize.defaultSpace * 2),
-              child: Row(
-                children: [
-                  const Icon(
-                    UniconsLine.envelope_edit,
-                  ),
-                  const JGap(
-                    w: 30.0,
-                  ),
-                  Text(
-                    'Write to us',
-                    style: Theme.of(context).textTheme.headlineSmall,
-                  ),
-                ],
-              )),
+          GestureDetector(
+            onTap: () {
+              controller.writeFeedback();
+            },
+            child: ElevatedTileContainer(
+                padding: const EdgeInsets.only(left: JmSize.defaultSpace * 2),
+                child: Row(
+                  children: [
+                    const Icon(
+                      UniconsLine.envelope_edit,
+                    ),
+                    const JGap(
+                      w: 30.0,
+                    ),
+                    Text(
+                      'Write to us',
+                      style: Theme.of(context).textTheme.headlineSmall,
+                    ),
+                  ],
+                )),
+          ),
           const JGap(
             h: JmSize.spaceBtwItems,
           ),

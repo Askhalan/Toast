@@ -9,8 +9,10 @@ class UserModel {
   String lastName;
   String gender;
   String profilePic;
+  String bannerPic;
   String username;
   String email;
+  String bio;
 
   UserModel({
     this.id = '',
@@ -20,6 +22,8 @@ class UserModel {
     required this.username,
     required this.email,
     required this.profilePic,
+    required this.bannerPic,
+    required this.bio,
   });
 
   Map<String, dynamic> tojson() => {
@@ -38,7 +42,9 @@ class UserModel {
       firstName: '',
       lastName: '',
       gender: '',
-      profilePic: '');
+      profilePic: '',
+      bannerPic: '', 
+      bio: '');
 
   static List<String> nameParts(fullName)=> fullName.split(" ");
 
@@ -64,7 +70,9 @@ class UserModel {
           firstName: data['FirstName'] ?? '',
           lastName: data['LastName'] ?? '',
           gender: data['Gender'] ?? '',
-          profilePic:  data['ProfilePic'] ?? '');
+          profilePic:  data['ProfilePic'] ?? '', 
+          bannerPic: data['BannerPic'] ?? '', 
+          bio: data['Bio'] ?? '');
     } else {
       return UserModel.empty();
     }
